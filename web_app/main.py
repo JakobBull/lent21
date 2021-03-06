@@ -142,9 +142,12 @@ def register():
 @login_required
 def scan():
     if request.method == 'POST':
-        video_stream.save_frame()
+        img_name = video_stream.save_frame()
+        return render_template('scan.html', feed=0, img_name=img_name)
+
+
     
-    return render_template('scan.html')
+    return render_template('scan.html', feed=1)
 
 def gen(camera):
     while True:

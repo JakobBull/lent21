@@ -12,8 +12,6 @@ class VideoCamera(object):
     def get_frame(self):
         ret, frame = self.video.read()
 
-        # DO WHAT YOU WANT WITH TENSORFLOW / KERAS AND OPENCV
-
         ret, jpeg = cv2.imencode('.jpg', frame)
 
         return jpeg.tobytes()
@@ -22,6 +20,12 @@ class VideoCamera(object):
         ret, frame = self.video.read()
 
         img_name = "opencv_frame_{}.png".format(self.img_counter)
-        cv2.imwrite(img_name, frame)
-        print("{} written!".format(img_name))
+        #path = 'Users/naresh/Documents/University/Hackathons/CUES Global Solutions Hacakathon/lent21/web_app/static'
+        #img_name = os.path.join(path , img_name)
+        print(img_name)
+        written = cv2.imwrite(img_name, frame)
+        if written == 1:
+            print("{} written!".format(img_name))
         self.img_counter += 1
+
+        return img_name

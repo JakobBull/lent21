@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}
+    Webcam
+{% endblock %}
+
+{% block main %}
+<form action="/scan" method="post">
+    <button name="capture" type="submit">Capture</button>
+</form>
+
+{% if feed == 1 %}
+
+    <img src="{{ url_for('video_feed') }}" width="100%"/>
+
+{% else %}
+
+    <img src="/static/download.png" width="50%"/>
+
+    <form action="/scan" method="get">
+        <button name="recapture" type="submit">Scan a different question</button>
+    </form>
+
+{% endif %}
+
+{% endblock %}
