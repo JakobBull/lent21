@@ -1,9 +1,12 @@
-from flask import Flask, render_template, Response, jsonify, request, session
+from flask import Flask, render_template, Response, jsonify, request, session, redirect
 from flask_session import Session
 from sql_utils import *
+from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
+from werkzeug.security import check_password_hash, generate_password_hash
 from tempfile import mkdtemp
 from camera import VideoCamera
 import cv2
+import youtube_utils
 
 from helpers import login_required
 
@@ -45,22 +48,28 @@ def login():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return render_template("apology.html", error="Must provide username")
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return render_template("apology.html", error="Must provide password")
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = :username",
-                          username=request.form.get("username"))
+        username = request.form.get("username")
+        query = 'SELECT * FROM Users WHERE user_name = ?'
+        params = (username,)
+        result = sqliteExecute(query, params)
+        print(result)
+        print(result[0])
+        print(result[0][2])
+
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
-            return apology("invalid username and/or password", 403)
+        if len(result) != 1 or not check_password_hash(result[0][2], request.form.get("password")):
+            return render_template("apology.html", error="Invalid username and/or password")
 
         # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
+        session["user_id"] = result[0][0]
 
         # Redirect user to home page
         return redirect("/")
@@ -100,15 +109,15 @@ def register():
 
         # Ensure username is unique by querying database for username
         username = request.form.get("username")
-        query = 'SELECT * FROM users WHERE user_name = ?'
+        query = 'SELECT * FROM Users WHERE user_name = ?'
         params = (username,)
         result = sqliteExecute(query, params)
-        print(result)
+        #print(result)
 
         password1 = request.form.get("password")
         password2 = request.form.get("confirm password")
 
-        if len(rows) != 0:
+        if len(result) != 0:
             return render_template("apology.html", error="Username has already been taken, please choose a new one")
 
         # Ensure password and confirmed password match
@@ -119,9 +128,9 @@ def register():
             return render_template("apology.html", error="Password requires at least 6 characters and must include a number")
 
         # input user into database
-        query = 'INSERT INTO users (username, hash) VALUES (?, ?)'
-        params = (request.form.get("username"), generate_password_hash(password1))
-        result = sqliteExecute(query)
+        query = 'INSERT INTO Users (user_name, hash) VALUES (?, ?)'
+        params = (username, generate_password_hash(password1))
+        result = sqliteExecute(query, params)
         #db.execute("INSERT INTO users (username, hash) VALUES (:username, :hash)", username=request.form.get("username"), hash=generate_password_hash(password1))
         return redirect("/")
 

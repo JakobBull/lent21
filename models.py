@@ -11,4 +11,4 @@ class Users(db.Model):
 
     user_id = db.Column(db.Integer, nullable=False, primary_key=True, autoincrement=True)
     user_name = db.Column(db.String, nullable=False, unique=True)
-    password = db.Column(db.String, default=True, nullable=False)
+    password = db.Column(db.String, nullable=False)
