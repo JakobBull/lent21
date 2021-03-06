@@ -16,7 +16,7 @@ class VideoCamera(object):
         ret, jpeg = cv2.imencode('.jpg', frame)
 
         return jpeg.tobytes()
-    """
+
     def save_frame(self):
         ret, frame = self.video.read()
 
@@ -24,11 +24,11 @@ class VideoCamera(object):
         #path = 'Users/naresh/Documents/University/Hackathons/'
         #img_name = os.path.join(path , img_name)
         print(sys.path[0])
-        img_name = sys.path[0] +'/static/' + img_name
-        print(img_name)
+        #img_name = sys.path[0] +'/static/' + img_name
+        #print(img_name)
         written = cv2.imwrite(img_name, frame)
         if written == 1:
             print("{} written!".format(img_name))
         self.img_counter += 1
 
-        return img_name"""
+        return img_name
