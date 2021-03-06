@@ -1,11 +1,11 @@
 
 indeces = ["^"]
-algebra = ["factorise", "sqrt", "solve", "expand", "work out", "simplify"]
-ratios = ["ratio", "%"]
+algebra = ["factorise", "sqrt", "solve", "expand", "work out", "simplify", "formula", "in terms of", "algebraic"]
+ratios = ["ratio", "%", "VAT", "proportion"]
 stats = ["distribution"]
 simultaneous = ["simultaneous"]
-inequalities = ["<", ">" ]
-probability = ["probability"]
+inequalities = ["<", ">", "inequality", "inequalities"]
+probability = ["probability", "dice", "tree diagram", "chance"]
 proof = ["prove"]
 numbers = ["express", "prime", "write"]
 
