@@ -19,12 +19,13 @@ class VideoCamera(object):
 
     def save_frame(self):
         ret, frame = self.video.read()
-        print("opencv_frame_{}.png".format(self.img_counter))
-        img_name = "opencv_frame_{}.png".format(self.img_counter)
+        path = os.getcwd() + '/static/'
+        print(path + "opencv_frame_{}.png".format(self.img_counter))
+        img_name = path + "opencv_frame_{}.png".format(self.img_counter)
         print(img_name)
         written = cv2.imwrite(img_name, frame)
         if written == 1:
             print("{} written!".format(img_name))
         self.img_counter += 1
 
-        return img_name
+        return "opencv_frame_{}.png".format(self.img_counter-1)
