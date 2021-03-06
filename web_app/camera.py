@@ -19,7 +19,7 @@ class VideoCamera(object):
 
     def save_frame(self):
         ret, frame = self.video.read()
-        path = os.getcwd() + '/static/'
+        path = os.getcwd() + '/static/images/'
         print(path + "opencv_frame_{}.png".format(self.img_counter))
         img_name = path + "opencv_frame_{}.png".format(self.img_counter)
         print(img_name)
