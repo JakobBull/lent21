@@ -6,7 +6,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from tempfile import mkdtemp
 from camera import VideoCamera
 import cv2
-from youtube_utils import youtube_search
+from youtube_utils import youtube_search, get_video_codes
 
 from helpers import login_required
 
@@ -33,7 +33,6 @@ Session(app)
 
 @app.route('/', methods=["GET", "POST"])
 def index():
-
     return render_template('index.html')
 
 @app.route("/login", methods=["GET", "POST"])
@@ -59,11 +58,7 @@ def login():
         query = 'SELECT * FROM Users WHERE user_name = ?'
         params = (username,)
         result = sqliteExecute(query, params)
-        print(result)
-        print(result[0])
-        print(result[0][2])
-
-
+     
         # Ensure username exists and password is correct
         if len(result) != 1 or not check_password_hash(result[0][2], request.form.get("password")):
             return render_template("apology.html", error="Invalid username and/or password")
@@ -144,15 +139,38 @@ def scan():
     if request.method == 'POST':
         img_name = video_stream.save_frame()
         results = youtube_search('indices', max_results=3)
-        #print(results)
-        for i,item in enumerate(results):
-            print(item['id'])
-            
-        return render_template('scan.html', feed=0, img_name=img_name)
+        
+        vid_list = get_video_codes(results)
+
+        return render_template('scan.html', feed=0, img_name=img_name, vid_list=vid_list)
 
 
     
     return render_template('scan.html', feed=1)
+
+@app.route('/maths')
+def maths():
+    return render_template('maths.html')
+
+@app.route('/biology')
+def biology():
+    return render_template('biology.html')
+
+@app.route('/chemistry')
+def chemistry():
+    return render_template('chemistry.html')
+
+@app.route('/physics')
+def physics():
+    return render_template('physics.html')
+
+@app.route('/mental_health')
+def mental_health():
+    return render_template('mental_health.html')
+
+@app.route('/questions')
+def mental_health():
+    return render_template('question.html', related_questions=related_questions)
 
 def gen(camera):
     while True:

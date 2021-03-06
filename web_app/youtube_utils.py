@@ -20,21 +20,23 @@ def youtube_search(key_list, max_results=10, return_type='dict'):
 
     return results
 
-def get_video_code(url):
+def get_video_codes(vid_dict):
 
     ''' 
 
-    input a url strig of a youtube video and return the code
+    input a dict from youtube_search and return list of codes
 
     '''
 
-    assert type(url) == str
-    assert url[:24] == 'https://www.youtube.com/'
-    print(url[:24])
-    start = url.index('=')
-    code = url[start+1:]
+    #assert type(vid_dict) == dict
 
-    return code
+    vid_list = []
+    for i, item in enumerate(vid_dict):
+        vid_list.append(item['id'])
+
+    return vid_list
 
 #print(get_video_code('https://www.youtube.com/watch?v=Fnp2em6txUY'))
-#print(youtube_search('hello world', return_type='json'))
+#results = youtube_search('hello world', max_results=3)
+
+#print(get_video_codes(results))
