@@ -35,8 +35,3 @@ def get_video_codes(vid_dict):
         vid_list.append(item['id'])
 
     return vid_list
-
-#print(get_video_code('https://www.youtube.com/watch?v=Fnp2em6txUY'))
-#results = youtube_search('hello world', max_results=3)
-
-#print(get_video_codes(results))

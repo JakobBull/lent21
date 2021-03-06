@@ -10,6 +10,8 @@ from youtube_utils import youtube_search, get_video_codes
 
 from helpers import login_required
 
+from predict import Predict
+
 app = Flask(__name__)
 
 video_stream = VideoCamera()
@@ -142,7 +144,10 @@ def featured():
 def scan():
     if request.method == 'POST':
         img_name = video_stream.save_frame()
-        results = youtube_search('indices', max_results=3)
+        image_path = "/static/images/" + img_name
+        Pred = Predict()
+        search_key = Pred.predict(image_path)
+        results = youtube_search(search_key, max_results=3)
         
         vid_list = get_video_codes(results)
 

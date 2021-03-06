@@ -1,4 +1,4 @@
-from classifier import RFClass
+#from classifier import RFClass
 import mathpix
 import json
 import pandas as pd
@@ -75,15 +75,13 @@ class Predict:
         except:
             import Image
 
-        try:
-
-            self.r = mathpix.latex({
-                'src': mathpix.image_uri(link),
-                'formats': self.formats
-            })
-        except socket.error:
-            print(link)
-            pass
+        self.r = mathpix.latex({
+            'src': mathpix.image_uri(link),
+            'formats': self.formats
+        })
+        '''except socket.error:
+            print('hi i am naresh')
+            pass'''
 
         try:
 
