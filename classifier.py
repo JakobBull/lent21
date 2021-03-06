@@ -1,0 +1,10 @@
+
+indeces = ["^"]
+algebra = ["factorise", "sqrt", "solve", "expand", "work out", "simplify"]
+ratios = ["ratio", "%"]
+stats = ["distribution"]
+simultaneous = ["simultaneous"]
+inequalities = ["<", ">" ]
+probability = ["probability"]
+proof = ["prove"]
+numbers = ["express", "prime", "write"]
