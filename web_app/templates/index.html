@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block head %}
+    <script type="text/javascript">
+        window.onload = setupRefresh;
+        function setupRefresh()
+        {
+            setInterval("refreshBlock();", 1000);
+        }
+
+        function refreshBlock()
+        {
+            $("#block").load(location.href+" #block>*","");
+        }
+    </script>
+
+{% endblock %}
+
+{% block main %}
+<div>
+    <h1>Welcome to EduMate!</h1>
+    <h4> We want to create free access to education resources all collated in one space</h4>
+</div>
+
+
+
+
+<iframe src="https://www.youtube.com/embed/YQHsXMglC9A" width="853" height="480" frameborder="0" allowfullscreen></iframe>
+
+{% endblock %}
