@@ -103,6 +103,6 @@ for link in image_links:
 
 print(len(latex), len(numerical_texts), len(texts))
 
-data = pd.DataFrame(list(zip(numerical_texts, latex, texts, image_names)), columns = ['numerical_text', 'latex', 'text', 'label'])
+data = pd.DataFrame(list(zip(numerical_texts, latex, confidence, texts, image_names)), columns = ['numerical_text', 'latex', 'confidence', 'text', 'label'])
 
 data.to_csv('data_1.csv')
