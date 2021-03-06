@@ -1,14 +1,11 @@
-from flask import Flask
+from flask import *
 from string import Template
 app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    return """
-    <h1>Hello world!</h1>
 
-    <iframe src="https://www.youtube.com/embed/YQHsXMglC9A" width="853" height="480" frameborder="0" allowfullscreen></iframe>
-    """
+  return render_template('index.html', youtube_id='YQHsXMglC9A')
 
 @app.route('/videos/<vid>')
 def videos(vid):
@@ -23,7 +20,8 @@ def videos(vid):
       <iframe src="https://www.youtube.com/embed/${youtube_id}" width="853" height="480" frameborder="0" allowfullscreen></iframe>
     """)
 
-    return vidtemplate.substitute(youtube_id=vid)
+    #return vidtemplate.substitute(youtube_id=vid)
+    return render_template('videos.html', youtube_id=vid)
 
 
 if __name__ == '__main__':

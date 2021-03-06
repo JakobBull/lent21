@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Videos
+{% endblock %}
+
+{% block head %}
+    <script type="text/javascript">
+        window.onload = setupRefresh;
+        function setupRefresh()
+        {
+            setInterval("refreshBlock();", 1000);
+        }
+
+        function refreshBlock()
+        {
+            $("#block").load(location.href+" #block>*","");
+        }
+    </script>
+
+{% endblock %}
+
+{% block main %}
+
+<h2>
+    YouTube video link: 
+    <a href="{{ 'https://www.youtube.com/watch?v=' ~ youtube_id}}">
+        {{youtube_id }}
+    </a>
+</h2>
+
+<iframe src="{{ 'https://www.youtube.com/embed/' ~ youtube_id ~ '?autoplay=1'}}" width="853" height="480" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+
+{% endblock %}
