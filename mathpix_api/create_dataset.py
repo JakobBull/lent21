@@ -1,6 +1,8 @@
-import mathpix 
+import mathpix_api.mathpix as mathpix
 import json
 import pandas as pd
+import os
+
 
 try:
     from PIL import Image
@@ -10,9 +12,26 @@ except:
 import pytesseract
 
 
+def return_label(name):
+    label_list = ["algebra", "indeces", "inequalities", "numbers", "probability", "proof", "ratios", "simultaneous", "stats"]
+    for item in label_list:
+        if item in str(name):
+            return item
 
+    return "unknown"
 
-image_links = ['/home/jakob/Documents/Hackathon/lent21/questions/question101.png','/home/jakob/Documents/Hackathon/lent21/questions/question102.png']
+#path = os.path.join()
+directory = 'questions'
+
+image_links = []
+image_names = []
+for filename in os.listdir(directory):
+    if filename.endswith(".jpg") or filename.endswith(".png"): 
+         image_links.append(os.path.join(directory, filename))
+         image_names.append(return_label(filename))
+    else:
+        continue
+
 formats = ['latex_simplified', 'text']
 
 numerical_texts = []
@@ -54,3 +73,7 @@ for link in image_links:
         texts.append("")
 
 print(latex, numerical_texts, texts)
+
+data = pd.DataFrame(list(zip(numerical_texts, latex, texts, filename), columns = ['numerical_text', 'latex', 'text', 'label']))
+
+data.to_csv('data_1.csv')

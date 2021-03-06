@@ -16,8 +16,8 @@ import json
 #env = os.environ
 
 default_headers = {
-    'app_id': '',
-    'app_key': '',
+    'app_id': 'jab302_cam_ac_uk_7d047f_7c0f5f',
+    'app_key': 'd2f65583906e266690cb',
     'Content-type': 'application/json'
 }
 
