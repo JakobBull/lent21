@@ -13,11 +13,11 @@ import json
 # APP_ID=my-id APP_KEY=my-key python3 simple.py 
 #
 
-env = os.environ
+#env = os.environ
 
 default_headers = {
-    'app_id': env.get('APP_ID', 'trial'),
-    'app_key': env.get('APP_KEY', '34f1a4cea0eaca8540c95908b4dc84ab'),
+    'app_id': '',
+    'app_key': '',
     'Content-type': 'application/json'
 }
 

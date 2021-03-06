@@ -17,7 +17,7 @@ import json
 #
 
 r = mathpix.latex({
-    'src': mathpix.image_uri('../images/algebra.jpg'),
+    'src': mathpix.image_uri('/home/jakob/Documents/Hackathon/lent21/api-examples/images/algebra.jpg'),
     'formats': ['latex_simplified']
 })
 
