@@ -132,6 +132,10 @@ def register():
     else:
         return render_template("register.html")
 
+@app.route('/featured',  methods=["GET", "POST"])
+@login_required
+def featured():
+    return render_template('featured.html', related_questions=[])
 
 @app.route('/scan',  methods=["GET", "POST"])
 @login_required
