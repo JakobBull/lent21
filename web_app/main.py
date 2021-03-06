@@ -6,7 +6,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from tempfile import mkdtemp
 from camera import VideoCamera
 import cv2
-import youtube_utils
+from youtube_utils import youtube_search
 
 from helpers import login_required
 
@@ -143,6 +143,11 @@ def register():
 def scan():
     if request.method == 'POST':
         img_name = video_stream.save_frame()
+        results = youtube_search('indices', max_results=3)
+        #print(results)
+        for i,item in enumerate(results):
+            print(item['id'])
+            
         return render_template('scan.html', feed=0, img_name=img_name)
 
 

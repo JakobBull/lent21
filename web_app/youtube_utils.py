@@ -12,9 +12,9 @@ def youtube_search(key_list, max_results=10, return_type='dict'):
     '''
 
     if return_type == 'dict':
-        results = YoutubeSearch(key_list, max_results=10).to_dict()
+        results = YoutubeSearch(key_list, max_results).to_dict()
     elif return_type == 'json':
-        results = YoutubeSearch(key_list, max_results=10).to_json()
+        results = YoutubeSearch(key_list, max_results).to_json()
     else:
         ValueError('return_type must equal dict or json')
 

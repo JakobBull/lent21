@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
         <!-- link href="/static/favicon.ico" rel="icon" -->
-        <link rel="icon" type="image/png" href="static/download.png"/>
+        <link rel="icon" type="image" href="static/download.png"/>
 
         <link href="/static/styles.css" rel="stylesheet">
 
@@ -37,7 +37,16 @@
                     <ul class="navbar-nav mr-auto mt-2">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/Featured">Featured</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/Subjects">Subjects</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/Subjects">
+                                Subjects
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/Maths">Maths</a>
+                                    <a class="dropdown-item" href="/Chemistry">Chemistry</a>
+                                    <a class="dropdown-item" href="/Biology">Biology</a>
+                                  </div>
+                            </a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="/scan">Scan A Question</a></li>
                     </ul>
                     <ul class="navbar-nav ml-auto mt-2">
@@ -64,7 +73,7 @@
             {% block main %}{% endblock %}
         </main>
         
-        <footer class="small text-center text-muted">
+        <footer class="small text-center text-muted bg-dark color">
             Created by <a href="https://github.com/nareshr100">Naresh Rasakulasuriar</a> and <a href="https://github.com/Jakob2000Cam">Jakob Bull</a>
         </footer>
 

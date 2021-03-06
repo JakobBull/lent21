@@ -20,7 +20,7 @@ class VideoCamera(object):
         ret, frame = self.video.read()
 
         img_name = "opencv_frame_{}.png".format(self.img_counter)
-        #path = 'Users/naresh/Documents/University/Hackathons/CUES Global Solutions Hacakathon/lent21/web_app/static'
+        #path = 'Users/naresh/Documents/University/Hackathons/'
         #img_name = os.path.join(path , img_name)
         print(img_name)
         written = cv2.imwrite(img_name, frame)
