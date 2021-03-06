@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}
+    Maths
+{% endblock %}
+
+{% block main %}
+    <h1>
+        Maths
+    </h1>
+
+    <table width="100%">
+        <tr>
+            <td width="80%">
+                <img src="/static/images/opencv_frame_0.png" width="600px">
+            </td>
+            <td width="80%">
+                <h3>
+                    Enjoyed this question? Why not checkout a similar question:
+                </h3>
+            
+                {% for question in related_questions %}
+            
+                <tr>
+                    <td>
+                        <a href="/question">
+                            {{ question }}
+                        </a>
+                    </td>
+                </tr>
+            
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

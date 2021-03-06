@@ -132,21 +132,31 @@ def register():
     else:
         return render_template("register.html")
 
+@app.route('/featured',  methods=["GET", "POST"])
+@login_required
+def featured():
+    return render_template('featured.html', related_questions=[])
 
 @app.route('/scan',  methods=["GET", "POST"])
 @login_required
 def scan():
     if request.method == 'POST':
-        #img_name = video_stream.save_frame()
+        img_name = video_stream.save_frame()
         results = youtube_search('indices', max_results=3)
         
         vid_list = get_video_codes(results)
 
-        return render_template('scan.html', feed=0, img_name="img_name", vid_list=vid_list, related_questions=[])
-
-
-    
+        return render_template('scan.html', feed=0, img_name=img_name, vid_list=vid_list, related_questions=[])
+  
     return render_template('scan.html', feed=1, related_questions=[])
+
+
+def gen(camera):
+    while True:
+        frame = camera.get_frame()
+
+        yield (b'--frame\r\n'
+            b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
 @app.route('/maths')
 def maths():
@@ -168,16 +178,20 @@ def physics():
 def mental_health():
     return render_template('mental_health.html')
 
-@app.route('/questions')
-def questions():
-    return render_template('question.html', related_questions=related_questions)
+@app.route('/questions/<question_id>')
+def questions(question_id):
+    # get question from question_id
+    query = 'SELECT * FROM Questions WHERE question_id = ?'
+    params = (question_id,)
+    result = sqliteExecute(query, params)
+    print(result)
 
-def gen(camera):
-    while True:
-        frame = camera.get_frame()
+    if len(result) == 0:
+        return render_template("apology.html", error="No questions with that question id")
+    
+    question = result[0][2]
 
-        yield (b'--frame\r\n'
-            b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
+    return render_template('questions.html', question=question, related_questions=[])
 
 
 @app.route('/video_feed', methods=["GET", "POST"])

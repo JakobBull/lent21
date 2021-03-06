@@ -1,6 +1,7 @@
 from typing import Dict, List
 import sqlite3
 import os
+import sys
 
 app_dir = os.path.dirname(os.path.abspath(__file__))
 database_dir = os.path.join(app_dir, "db.sqlite")
@@ -98,3 +99,74 @@ def sqliteExecute(instruction, params = ()):
     print("The SQLite connection is closed")
 
     return result
+
+'''def convertToBinaryData(filename):
+    # Convert digital data to binary format
+    with open(filename, 'rb') as file:
+        blobData = file.read()
+    return blobData
+
+def insertQuestion(subject, topic, question):
+    try:
+        sqliteConnection = sqlite3.connect(database_dir)
+        cursor = sqliteConnection.cursor()
+        print("Connected to SQLite")
+        sqlite_insert_blob_query = """ INSERT INTO Questions
+                                  (subject, topic, question) VALUES (?, ?, ?)"""
+
+        empQuestion = convertToBinaryData(question)
+        # Convert data into tuple format
+        data_tuple = (subject, topic, question)
+        cursor.execute(sqlite_insert_blob_query, data_tuple)
+        sqliteConnection.commit()
+        print("Image and file inserted successfully as a BLOB into a table")
+        cursor.close()
+
+    except sqlite3.Error as error:
+        print("Failed to insert blob data into sqlite table", error)
+    finally:
+        if sqliteConnection:
+            sqliteConnection.close()
+            print("the sqlite connection is closed")
+
+def writeTofile(data, filename):
+    # Convert binary data to proper format and write it on Hard Disk
+    with open(filename, 'wb') as file:
+        file.write(data)
+    print("Stored blob data into: ", filename, "\n")
+
+def readBlobData(question_id):
+    try:
+        sqliteConnection = sqlite3.connect(database_dir)
+        cursor = sqliteConnection.cursor()
+        print("Connected to SQLite")
+
+        sql_fetch_blob_query = """SELECT * from Questions where question_id = ?"""
+        cursor.execute(sql_fetch_blob_query, (question_id,))
+        record = cursor.fetchall()
+        for row in record:
+            print(row[:2])
+            #print("question_id = ", row[0], "subject = ", row[1], "topic = ", row[2])
+            topic = row[1]
+            question = row[3]
+            #resumeFile = row[3]
+
+            #print("Storing employee image and resume on disk \n")
+            photoPath = sys.path[0] + "question" + str(row[0]) + ".txt"
+            print(photoPath)
+            #resumePath = "E:\pynative\Python\photos\db_data\\" + name + "_resume.txt"
+            writeTofile(question, photoPath)
+            #writeTofile(resumeFile, resumePath)
+
+        cursor.close()
+
+    except sqlite3.Error as error:
+        print("Failed to read blob data from sqlite table", error)
+    finally:
+        if sqliteConnection:
+            sqliteConnection.close()
+            print("sqlite connection is closed")
+
+#print(convertToBinaryData('download2.png'))
+insertQuestion('maths', 'algebra', 'download2.png')
+#readBlobData(1)'''

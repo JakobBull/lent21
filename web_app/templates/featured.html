@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+    Chemistry
+{% endblock %}
+
+{% block main %}
+<div width="100%">
+    <h1>
+        Featured Questions
+    </h1>
+    <h4>
+        Not sure where to look? Take a look a this weeks' fetaured questions!
+    </h4>
+    
+    <table width="100%">
+        {% for question in related_questions %}
+            
+        <tr>
+            <td>
+                <a href="/question">
+                    {{ question }}
+                </a>
+            </td>
+        </tr>
+    
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

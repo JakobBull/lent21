@@ -36,7 +36,7 @@
                 {% if session.user_id %}
                     <ul class="navbar-nav mr-auto mt-2">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/Featured">Featured</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/featured">Featured</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/Subjects">
                                 Subjects
@@ -74,11 +74,83 @@
         <main class="container p-5">
             {% block main %}{% endblock %}
         </main>
-        
-        <footer class="small text-center text-muted bg-dark color">
-            Created by <a href="https://github.com/nareshr100">Naresh Rasakulasuriar</a> and <a href="https://github.com/Jakob2000Cam">Jakob Bull</a>
-        </footer>
+        <footer class="site-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">
+                        EduMate.com 
+                    </p>
+                    <p class="text-justify">
+                        <i>
+                            WE WANT TO MAKE ONLINE LEARNING EASIER.
+                        </i> 
+                    </p>
 
+                    <p class="text-justify">
+                        Online learning has been hard, especially with the lonliness and uncertainty of a global pandemic.
+                        We are here to take some of the burden and inject some more joy into learning. Think of us as your online learning buddy!
+                    </p>
+                </div>
+      
+                <div class="col-xs-6 col-md-3">
+                  <h6>Categories</h6>
+                  <ul class="footer-links">
+                    <li><a href="http://scanfcode.com/category/c-language/">Mental Health</a></li>
+                    <li><a href="http://scanfcode.com/category/front-end-development/">STEM</a></li>
+                    <li><a href="http://scanfcode.com/category/back-end-development/">Huamanities</a></li>
+                    <li><a href="http://scanfcode.com/category/java-programming-language/">Problem Solving Skills</a></li>
+                    <li><a href="http://scanfcode.com/category/android/">University Admissions</a></li>
+                    <li><a href="http://scanfcode.com/category/templates/">Careers</a></li>
+                  </ul>
+                </div>
+      
+                <div class="col-xs-6 col-md-3">
+                  <h6>Quick Links</h6>
+                  <ul class="footer-links">
+                    <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                    <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                    <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                    <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                  </ul>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                  <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+               <a href="#">EduMate</a>.
+                  </p>
+                </div>
+      
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </footer>
+        <!--<footer class="small text-center text-muted bg-dark color">
+            <table width="100%">
+                <tr>
+                    <td width="60%">
+                        <a href="naresh@suriar.me.uk">Contact Us</a>
+                    </td>
+                    <td width="40%">
+                        Created by <a href="https://github.com/nareshr100">Naresh Rasakulasuriar</a> and <a href="https://github.com/Jakob2000Cam">Jakob Bull</a>
+                    </td>
+                </tr>
+            </table>
+        </footer> -->
+    
     </body>
 
 </html>
