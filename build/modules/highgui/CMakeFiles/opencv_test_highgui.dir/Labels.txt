@@ -1,0 +1,17 @@
+# Target labels
+ Main
+ opencv_highgui
+ AccuracyTest
+# Source files and their labels
+/home/jakob/Documents/Hackathon/lent21/opencv-master/modules/highgui/test/test_gui.cpp
+ Main
+ opencv_highgui
+ AccuracyTest
+/home/jakob/Documents/Hackathon/lent21/opencv-master/modules/highgui/test/test_main.cpp
+ Main
+ opencv_highgui
+ AccuracyTest
+/home/jakob/Documents/Hackathon/lent21/opencv-master/modules/highgui/test/test_precomp.hpp
+ Main
+ opencv_highgui
+ AccuracyTest

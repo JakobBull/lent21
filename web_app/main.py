@@ -137,16 +137,16 @@ def register():
 @login_required
 def scan():
     if request.method == 'POST':
-        img_name = video_stream.save_frame()
+        #img_name = video_stream.save_frame()
         results = youtube_search('indices', max_results=3)
         
         vid_list = get_video_codes(results)
 
-        return render_template('scan.html', feed=0, img_name=img_name, vid_list=vid_list)
+        return render_template('scan.html', feed=0, img_name="img_name", vid_list=vid_list, related_questions=[])
 
 
     
-    return render_template('scan.html', feed=1)
+    return render_template('scan.html', feed=1, related_questions=[])
 
 @app.route('/maths')
 def maths():
@@ -169,7 +169,7 @@ def mental_health():
     return render_template('mental_health.html')
 
 @app.route('/questions')
-def mental_health():
+def questions():
     return render_template('question.html', related_questions=related_questions)
 
 def gen(camera):

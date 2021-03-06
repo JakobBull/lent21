@@ -4,7 +4,7 @@ import sys
 
 class VideoCamera(object):
     def __init__(self):
-        self.video = cv2.VideoCapture(0)
+        self.video = cv2.VideoCapture(-1)
         self.img_counter = 0
 
     def __del__(self):
@@ -16,7 +16,7 @@ class VideoCamera(object):
         ret, jpeg = cv2.imencode('.jpg', frame)
 
         return jpeg.tobytes()
-    
+    """
     def save_frame(self):
         ret, frame = self.video.read()
 
@@ -31,4 +31,4 @@ class VideoCamera(object):
             print("{} written!".format(img_name))
         self.img_counter += 1
 
-        return img_name
+        return img_name"""
