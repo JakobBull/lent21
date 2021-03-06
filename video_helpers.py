@@ -2,15 +2,6 @@
 
 from youtube_search import YoutubeSearch
 
-'''
-results = YoutubeSearch('hello', max_results=10).to_json()
-
-print(results)
-
-results = YoutubeSearch('quadratics', max_results=10).to_dict()
-
-'''
-
 def youtube_search(key_list, max_results=10, return_type='dict'):
 
     ''' 
