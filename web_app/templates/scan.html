@@ -4,30 +4,74 @@
 {% endblock %}
 
 {% block main %}
-<form action="/scan" method="post">
-    <button name="capture" type="submit">Capture</button>
-</form>
+<table width="100%">
+    <colgroup>
+        <col span="1" style="width: 80%;">
+        <col span="1" style="width: 20%;">
+    </colgroup>
 
-{% if feed == 1 %}
+    <tbody>
+        <tr>
+            <td>
+                {% if feed == 1 %}
+                    <form action="/scan" method="post">
+                        <button name="capture" type="submit">Capture</button>
+                    </form>
 
-    <img src="{{ url_for('video_feed') }}" width="100%"/>
+                    <img src="{{ url_for('video_feed') }}" width="100%"/>
+                
+                {% else %}
+                
+                    <img src="{{ '/Users/naresh/Documents/University/Hackathons/CUES Global Solutions Hacakathon/lent21/web_app/' ~ img_name}}" width="50%"/>
+                
+                    <form action="/scan" method="get">
+                        <button name="recapture" type="submit">Scan a different question</button>
+                    </form>
+                
+                    <h2>
+                        Check out the videos below if you're stuck!
+                    </h2>
+                    <br>
+            </td>
+            <td>
+                <h3>
+                    Enjoyed this question? Why not checkout a similar question:
+                </h3>
 
-{% else %}
+                {% for question in related_questions}
 
-    <img src="/static/download.png" width="50%"/>
+                <tr>
+                    <td>
+                        <a href="\question">
+                            {{ question }}
+                        </a>
+                    </td>
+                </tr>
 
-    <form action="/scan" method="get">
-        <button name="recapture" type="submit">Scan a different question</button>
-    </form>
+                {% endfor %}
 
-    <h2>
-        YouTube video link: 
-        <a href="{{ 'https://www.youtube.com/watch?v=' ~ youtube_id}}">
-            {{youtube_id }}
-        </a>
-    </h2>
-    
-    <iframe src="{{ 'https://www.youtube.com/embed/' ~ youtube_id ~ '?autoplay=1'}}" width="853" height="480" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+            </td>
+        </tr>
+        {% for youtube_id in vid_list %}
+        
+        <tr>
+            <td>
+                <h4>
+                    <a href="{{ 'https://www.youtube.com/watch?v=' ~ youtube_id}}">
+                        Video below not showing? Click here     
+                    </a>
+                </h4>
+                
+                <iframe src="{{ 'https://www.youtube.com/embed/' ~ youtube_id}}" width="560" height="315" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+            </td>
+            <td>
+            </td>
+        </tr>
+       
+        {% endfor %}
+    </tbody>
+</table>
+
 
 {% endif %}
 

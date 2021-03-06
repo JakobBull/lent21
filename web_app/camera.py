@@ -1,5 +1,6 @@
 import cv2
 import os
+import sys
 
 class VideoCamera(object):
     def __init__(self):
@@ -22,6 +23,8 @@ class VideoCamera(object):
         img_name = "opencv_frame_{}.png".format(self.img_counter)
         #path = 'Users/naresh/Documents/University/Hackathons/'
         #img_name = os.path.join(path , img_name)
+        print(sys.path[0])
+        img_name = sys.path[0] +'/static/ ++ img_name
         print(img_name)
         written = cv2.imwrite(img_name, frame)
         if written == 1:
