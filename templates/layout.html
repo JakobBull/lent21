@@ -32,12 +32,22 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar">
+                {% if session.user_id %}
                     <ul class="navbar-nav mr-auto mt-2">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/emails">Featured</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/recommended">Subjects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/statistics">Statistics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Featured">Featured</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Subjects">Subjects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/scan">Scan A Question</a></li>
                     </ul>
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                    </ul>
+                {% else %}
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                    </ul>
+                {% endif %}
             </div>
         </nav>
 
@@ -54,7 +64,7 @@
         </main>
         
         <footer class="small text-center text-muted">
-            Data provided via <a href="https://spotipy.readthedocs.io/en/2.14.0/">Spotipy</a>
+            Created by <a href="https://github.com/nareshr100">Naresh Rasakulasuriar</a> and <a href="https://github.com/Jakob2000Cam">Jakob Bull</a>
         </footer>
 
     </body>
