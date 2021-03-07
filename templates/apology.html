@@ -6,9 +6,22 @@
 
 
 {% block main %}
-
-<h1>Sorry, this page was not found!</h1>
-
-<h3>{{ error }}</h3>
-
+<table width="100%">
+    <tr>
+        <td width = 30%>
+            <img src='/static/error.png'>
+        </td>
+        <td width = 70%>
+            <h1>Sorry, we encountered an error!</h1>
+            <br>
+            <h3>{{ error }}</h3>
+            {% if error_code == 401 %}
+            <a href="/login">Back to Login</a>
+            {% endif %}
+            {% if error_code == 400 %}
+            <a href="/register">Back to Register</a>
+            {% endif %}
+        </td>
+    </tr>
+</table>
 {% endblock %}

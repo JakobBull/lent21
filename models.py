@@ -11,19 +11,20 @@ class Users(db.Model):
 
     user_id = db.Column(db.Integer, nullable=False, primary_key=True, autoincrement=True)
     user_name = db.Column(db.String, nullable=False, unique=True)
-    password = db.Column(db.String, nullable=False)
+    hash = db.Column(db.String, nullable=False)
 
 @dataclass
 class Questions(db.Model):
 
     question_id: int
-    question_name: str
+    level: str
     subject: str
     topic: str
+    question_filename: str
     
 
     question_id = db.Column(db.Integer, nullable=False, primary_key=True, autoincrement=True)
-    question_name = db.Column(db.String, nullable=False, unique=True)
+    level = db.Column(db.String, nullable=False)
     subject = db.Column(db.String, nullable=False)
-    topic = db.Column(db.String, nullable=False)
-    topic = 
+    topics = db.Column(db.String, nullable=False)
+    question_filename = db.Column(db.String, nullable=False, unique=True)

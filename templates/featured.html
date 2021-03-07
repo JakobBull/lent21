@@ -9,17 +9,23 @@
         Featured Questions
     </h1>
     <h4>
-        Not sure where to look? Take a look a this weeks' fetaured questions!
+        Not sure where to look? Take a look a this week's featured questions!
     </h4>
-    
+    <br>
     <table width="100%">
-        {% for question in related_questions %}
-            
+        {% for q in random_questions %}
         <tr>
             <td>
-                <a href="/question">
-                    {{ question }}
-                </a>
+                <h5>
+                    <a href="{{'/questions/' ~ q[0]}}">
+                        {{ q[1] }}
+                    </a>
+                </h5>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{{'/static/questions/' ~ q[1]}}" width="90%">
             </td>
         </tr>
     

@@ -63,6 +63,8 @@ def insertRow(table: str, values: Dict[str, str]):
             VALUES {values_string};
         """
 
+        #print(query_string)
+
         cursor.execute(query_string)
         sqliteConnection.commit()
         print("Record Updated successfully ")
@@ -99,6 +101,21 @@ def sqliteExecute(instruction, params = ()):
     print("The SQLite connection is closed")
 
     return result
+
+def populate_questions(csv):
+    '''
+
+    populate the questoins database with all questions in the csv
+
+    '''
+
+    return None
+
+#q_dict = {"'level'":"'GCSE'", "'subject'":"'maths'", "'topics'":"'simultaneous'", "'question_filename'":"'simultaneous1.png'"}
+#insertRow('Questions', q_dict)
+
+#u_dict = {"'user_name'":"'bob'", "'hash'":"'hi'"}
+#insertRow('Users', u_dict)
 
 '''def convertToBinaryData(filename):
     # Convert digital data to binary format

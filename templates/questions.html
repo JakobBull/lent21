@@ -1,29 +1,32 @@
 {% extends "layout.html" %}
 {% block title %}
-    Maths
+    Questions
 {% endblock %}
 
 {% block main %}
     <h1>
-        Maths
+        {{ level }} - {{ subject }} - {{ topics }}
     </h1>
 
     <table width="100%">
         <tr>
             <td width="80%">
-                <img src="/static/images/opencv_frame_0.png" width="600px">
+                <img src="{{'/static/questions/' ~ question}}" width="90%">
             </td>
             <td width="80%">
-                <h3>
-                    Enjoyed this question? Why not checkout a similar question:
-                </h3>
+                <h4>
+                    Enjoyed this question?
+                </h4>
+                <h6>
+                    Why not checkout a similar one:
+                </h6>
             
-                {% for question in related_questions %}
+                {% for q in related_questions %}
             
                 <tr>
                     <td>
                         <a href="/question">
-                            {{ question }}
+                            {{ q }}
                         </a>
                     </td>
                 </tr>

@@ -14,24 +14,28 @@
         <tr>
             <td>
                 {% if feed == 1 %}
+                <div>
                     <form action="/scan" method="post">
-                        <button name="capture" type="submit">Capture</button>
+                        <button name="capture" type="submit" class="btn btn-danger">Capture</button>
                     </form>
-
-                    <img src="{{ url_for('video_feed') }}" width="70%%"/>
+                </div>
+                <br>
+                <img src="{{ url_for('video_feed') }}" width="70%%"/>
                 
                 {% else %}
-                
-                    <img src="{{'/static/images/' ~ img_name }}" width="560px"/>
-                
+                <div>
                     <form action="/scan" method="get">
-                        <button name="recapture" type="submit">Scan a different question</button>
+                        <button name="recapture" type="submit" class="btn btn-danger">Scan a different question</button>
                     </form>
-                
-                    <h2>
-                        Check out the videos below if you're stuck!
-                    </h2>
-                    <br>
+                </div>
+                <br>
+                <img src="{{'/static/images/' ~ img_name }}" width="560px"/>
+            
+                <h2>
+                    Check out the videos below if you're stuck!
+                </h2>
+                <br>
+                {% endif %}
             </td>
             <td>
                 <h3>
@@ -71,8 +75,5 @@
         {% endfor %}
     </tbody>
 </table>
-
-
-{% endif %}
-
+<br>
 {% endblock %}
