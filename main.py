@@ -7,7 +7,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from tempfile import mkdtemp
 from camera import VideoCamera
 import cv2
-from youtube_utils import youtube_search, get_video_codes
+from youtube_utils import youtube_search, get_video_codes, get_related_questions
 from random import randint
 
 from helpers import login_required
@@ -188,20 +188,10 @@ def scan():
         # search youtube for relevant videos
         results = youtube_search(search_key, max_results=3)
         vid_list = get_video_codes(results)
+        print(vid_list)
 
         # find related videos
-        query = 'SELECT * FROM Questions WHERE topics = ?'
-        params = (search_key,)
-        result = sqliteExecute(query, params)
-
-        related_questions = []
-        max_questions = 3
-        for i, item in enumerate(result):
-            if i < max_questions:
-                related_questions.append((item[0], item[-1]))
-            else:
-                break
-            
+        related_questions = get_related_questions(search_key)
 
         # render final template
         return render_template('scan.html', loading=0, feed=0, img_name=img_name, search_key=search_key, vid_list=vid_list, related_questions=related_questions)
@@ -217,43 +207,53 @@ def gen(camera):
             b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
 @app.route('/maths')
+@login_required
 def maths():
     return render_template('maths.html')
 
 @app.route('/biology')
+@login_required
 def biology():
     return render_template('biology.html')
 
 @app.route('/chemistry')
+@login_required
 def chemistry():
     return render_template('chemistry.html')
 
 @app.route('/physics')
+@login_required
 def physics():
     return render_template('physics.html')
 
 @app.route('/mental_health')
+@login_required
 def mental_health():
     return render_template('mental_health.html')
 
 @app.route('/questions/<question_id>')
+@login_required
 def questions(question_id):
     # get question from question_id
     query = 'SELECT * FROM Questions WHERE question_id = ?'
     params = (question_id,)
     result = sqliteExecute(query, params)
-    print(result)
+
+    # get related questions
+    topics = result[0][3]
+    related_questions = get_related_questions(topics)
+    print(related_questions)
 
     if len(result) == 0:
         return render_template("apology.html", error="No questions with that question id")
     
+    # format strings for HTML
     level = result[0][1].upper()
     subject = result[0][2].capitalize()
-    topics = result[0][3].capitalize()
-    #print(topics)
+    topics = topics.capitalize()
     question = result[0][-1].capitalize()
 
-    return render_template('questions.html', level=level, subject=subject, topics=topics, question=question, related_questions=[])
+    return render_template('questions.html', level=level, subject=subject, topics=topics, question=question, related_questions=related_questions)
 
 
 @app.route('/video_feed', methods=["GET", "POST"])
