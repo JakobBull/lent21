@@ -15,6 +15,13 @@
             <tr>
                 <td>
                     {% if feed == 1 %}
+
+                        {% for message in get_flashed_messages() %}
+                        <h4>
+                            <div class="alert-error">Error: {{ message }}</div>
+                        </h4>
+                        {% endfor %}
+                        
                     <div>
                         <form action="/scan" method="post">
                             <button name="capture" type="submit" class="btn btn-danger">Capture</button>
@@ -22,6 +29,7 @@
                     </div>
                     <br>
                     <img src="{{ url_for('video_feed') }}" width="70%%"/>
+                    
                     
                     {% else %}
                     <div>

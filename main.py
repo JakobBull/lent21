@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response, jsonify, request, session, redirect
+from flask import Flask, render_template, Response, jsonify, request, session, redirect, flash
 from flask_session import Session
 import string
 from sql_utils import *
@@ -51,11 +51,15 @@ def login():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return render_template("apology.html", error="Must provide username", error_code=401)
+            #return render_template("apology.html", error="Must provide username", error_code=401)
+            flash("Must provide username")
+            return render_template("login.html")
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return render_template("apology.html", error="Must provide password", error_code=401)
+            #return render_template("apology.html", error="Must provide password", error_code=401)
+            flash("Must provide password")
+            return render_template("login.html")
 
         # Query database for username
         username = request.form.get("username")
@@ -65,7 +69,9 @@ def login():
      
         # Ensure username exists and password is correct
         if len(result) != 1 or not check_password_hash(result[0][2], request.form.get("password")):
-            return render_template("apology.html", error="Invalid username and/or password", error_code=401)
+            #return render_template("apology.html", error="Invalid username and/or password", error_code=401)
+            flash("Invalid username and/or password")
+            return render_template("login.html")
 
         # Remember which user has logged in
         session["user_id"] = result[0][0]
@@ -74,8 +80,7 @@ def login():
         return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        return render_template("login.html")
+    return render_template("login.html")
 
 
 @app.route("/logout")
@@ -177,7 +182,8 @@ def scan():
 
         # handle errors
         if search_key == "error":
-            pass
+            flash('Image was not scanned correctly, please try again!')
+            return redirect('/scan')
 
         # search youtube for relevant videos
         results = youtube_search(search_key, max_results=3)

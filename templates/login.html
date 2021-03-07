@@ -5,6 +5,12 @@
 {% endblock %}
 
 {% block main %}
+    <!--{% for message in get_flashed_messages() %}
+    <h4>
+        <div class="alert-error">Error: {{ message }}</div>
+    </h4>
+    {% endfor %}-->
+                        
     <form action="/login" method="post">
         <div class="form-group">
             <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
