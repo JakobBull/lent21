@@ -64,12 +64,15 @@ class Predict:
         #load the content
         tfidf = pickle.load(open("features.pkl", "rb" ) )
 
-        X = tfidf.transform(X)
-        RFClass = pickle.load(open("model.pkl", 'rb'))
+        try:
+            X = tfidf.transform(X)
+            RFClass = pickle.load(open("model.pkl", 'rb'))
 
-        prediction = RFClass.predict(X)
-        
-        return prediction[0]
+            prediction = RFClass.predict(X)
+            
+            return prediction[0]
+        except ValueError:
+            return "error"
 
     def image_to_text(self, link):
         try:
