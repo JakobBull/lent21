@@ -7,10 +7,14 @@
     <h1>
         {{ level }} - {{ subject }} - {{ topics }}
     </h1>
-
+    <br>
     <table width="100%">
         <tr>
             <td width="80%">
+                <h3>
+                    {{ question }}
+                </h3>
+                <br>
                 <img src="{{'/static/questions/' ~ question}}" width="90%">
             </td>
             <td width="80%">
@@ -20,17 +24,13 @@
                 <h6>
                     Why not checkout a similar one:
                 </h6>
-            
+                <br>
                 {% for q in related_questions %}
-            
-                <tr>
-                    <td>
-                        <a href="/question">
-                            {{ q }}
+                    <p>
+                        <a href="{{'/questions/' ~ q[0]}}">
+                            {{ q[1] }}
                         </a>
-                    </td>
-                </tr>
-            
+                    </p>
                 {% endfor %}
             </td>
         </tr>
