@@ -16,17 +16,19 @@
                 <td>
                     {% if feed == 1 %}
 
-                        {% for message in get_flashed_messages() %}
+                        <!--{% for message in get_flashed_messages() %}
                         <h4>
                             <div class="alert-error">Error: {{ message }}</div>
                         </h4>
-                        {% endfor %}
+                        {% endfor %}-->
                         
-                    <div>
-                        <form action="/scan" method="post">
-                            <button name="capture" type="submit" class="btn btn-danger">Capture</button>
-                        </form>
-                    </div>
+                    <!--<div class="container">-->
+                        <div>
+                            <form action="/scan" method="post">
+                                <button name="capture" type="submit" class="btn btn-danger">Capture</button>
+                            </form>
+                        </div>
+                    <!--</div>-->
                     <br>
                     <img src="{{ url_for('video_feed') }}" width="70%%"/>
                     
@@ -51,17 +53,28 @@
                     {% endif %}
                 </td>
                 <td>
-                    <h3>
-                        Enjoyed this question? Why not checkout a similar question:
-                    </h3>
+                    {% if feed == 1 %}
 
-                    {% for q in related_questions %}
-                        <p>
-                            <a href="{{'/questions/' ~ q[0]}}">
-                                {{ q[1] }}
-                            </a>
-                        </p>
-                    {% endfor %}
+                    <h1>
+                        <----- Scan your question in here!
+                    </h1>
+
+                    {% else %}
+                        <h4>
+                            Enjoyed this question?
+                        </h4>
+                        <h6>
+                            Why not checkout a similar one:
+                        </h6>
+                        <br>
+                        {% for q in related_questions %}
+                            <p>
+                                <a href="{{'/questions/' ~ q[0]}}">
+                                    {{ q[1] }}
+                                </a>
+                            </p>
+                        {% endfor %}
+                    {% endif %}
                 </td>
             </tr>
             {% for youtube_id in vid_list %}
