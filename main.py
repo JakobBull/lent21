@@ -159,10 +159,16 @@ def featured():
     # populate a list with tuples containing question_id and question_name
     random_questions = []
     i = 0
+    counter = 0
 
-    while i < 2:
+    query = 'SELECT DISTINCT question_id FROM Questions'
+    result = sqliteExecute(query)
+    print(result)
+    print(result.sort())
+
+    while i < 10 and counter < 10:
         # pick question randomly
-        q_id = randint(1, 4)
+        q_id = randint(139, 258)
         query = 'SELECT * FROM Questions WHERE question_id = ?'
         params = (q_id,)
         result = sqliteExecute(query, params)
@@ -173,7 +179,8 @@ def featured():
                 random_questions.append((q_id, name))
                 i += 1
 
-    print(questions)
+        counter += 1
+    #print(questions)
 
     return render_template('featured.html', random_questions=random_questions)
 
@@ -218,10 +225,20 @@ def gen(camera):
         yield (b'--frame\r\n'
             b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
-@app.route('/maths')
+@app.route('/maths/<level>/<topics>')
 @login_required
-def maths():
-    return render_template('maths.html')
+def maths(level, topics):
+
+    if level == 'home' and topics == 'home':
+        return render_template('maths.html', depth=0)
+    elif topics == 'home':
+        topics = get_topics_from_subject('Maths', level)
+        return render_template('maths.html', depth=1, level=level, topics=topics)
+    else:
+        questions = get_questions_from_topic(level, topics)
+        return render_template('maths.html', depth=2, level=level, topics=topics, questions=questions)
+
+    
 
 @app.route('/biology')
 @login_required

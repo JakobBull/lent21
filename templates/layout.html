@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
         <!-- link href="/static/favicon.ico" rel="icon" -->
-        <link rel="icon" type="image/png" href="/static/logo.png"/>
+        <link rel="icon" type="image/png" href="/static/logo_square.png"/>
 
         <link href="/static/styles.css" rel="stylesheet">
 
@@ -38,17 +38,40 @@
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/mental_health">Mental Health</a></li>
                         <li class="nav-item"><a class="nav-link" href="/featured">Featured</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/Subjects">
-                                Subjects
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/maths">Maths</a>
-                                    <a class="dropdown-item" href="/physics">Physics</a>
-                                    <a class="dropdown-item" href="/chemistry">Chemistry</a>
-                                    <a class="dropdown-item" href="/biology">Biology</a>
-                                  </div>
+                        <div class="nav-item dropdown">
+                            <a id="dLabel" role="button" class="nav-link dropdown-toggle" data-toggle="dropdown" href="/page.html">
+                                Subjects <span class="caret"></span>
                             </a>
-                        </li>
+                            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                              <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="/maths/home/home">Maths</a>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item" href="/maths/KS1/home">KS1</a>
+                                    <a class="dropdown-item" href="/maths/KS2/home">KS2</a>
+                                    <a class="dropdown-item" href="/maths/KS3/home">KS3</a>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item" href="/maths/GCSE/home">GCSE</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/maths/GCSE/algebra">Algebra</a></li>
+                                            <li><a class="dropdown-item" href="/maths/GCSE/indices">Indices</a></li>
+                                            <li><a class="dropdown-item" href="/maths/GCSE/inequalities">Inequalities</a></li>
+                                            <li><a class="dropdown-item" href="/maths/GCSE/numbers">Numbers</a></li>
+                                            <li><a class="dropdown-item" href="/maths/GCSE/probability">Probability</a></li>
+                                            <li><a class="dropdown-item" href="/maths/GCSE/proof">Proof</a></li>
+                                            <li><a class="dropdown-item" href="/maths/GCSE/ratios">Ratios</a></li>
+                                            <li><a class="dropdown-item" href="/maths/GCSE/simultaneous">Simultaneous Equations</a></li>
+                                            <li><a class="dropdown-item" href="/maths/GCSE/statistics">Statistics</a></li>
+                                        </ul>
+                                      </li>
+                                    <a class="dropdown-item" href="/maths/A-Level">A-Level</a>
+                                    <a class="dropdown-item" href="/maths/University">University</a>
+                                </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="/Physics">Physics</a></li>
+                              <li><a class="dropdown-item" href="/Chemistry">Chemistry</a></li>
+                              <li><a class="dropdown-item" href="/Biology">Biology</a></li>
+                            </ul>
+                        </div>
                         <li class="nav-item"><a class="nav-link" href="/scan">Scan A Question</a></li>
                     </ul>
                     <ul class="navbar-nav ml-auto mt-2">

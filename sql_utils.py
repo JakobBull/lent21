@@ -141,6 +141,48 @@ def populate_questions(file):
 
     return q_list
 
+def get_topics_from_subject(subject, level=None):
+    
+    sub = "subject=" + "'" + subject + "'"
+    lev = "level=" + "'" + level + "'"
+    if level == None:
+        query = 'SELECT DISTINCT topics FROM Questions WHERE subject = ?'
+    else:
+        query = 'SELECT DISTINCT topics FROM Questions WHERE'
+        query = query + " " + sub + " AND " + lev
+    result = sqliteExecute(query)
+
+    topic_list = []
+
+    if result != None and len(result) != 0:
+        for i, result in enumerate(result):
+            if result[0] == 'unknown':
+                continue
+            topic_list.append(result[0])
+
+    return topic_list
+
+def get_questions_from_topic(level, topic):
+    
+    lev = "level=" + "'" + level + "'"
+    top = "topics=" + "'" + topic.lower() + "'"
+
+    query = 'SELECT DISTINCT question_id, question_filename FROM Questions WHERE'
+    query = query + " " + lev + " AND " + top
+    print(query)
+    result = sqliteExecute(query)
+
+    q_list = []
+
+    if result != None and len(result) != 0:
+        for i, result in enumerate(result):
+            q_list.append((result[0], result[1]))
+
+    return q_list
+
+#print(get_topics_from_subject('Maths', 'GCSE'))
+#print(get_questions_from_topic('GCSE', 'algebra'))
+
 # populate_questions('data_2.csv')[3]
 
 #q_dict = {"'level'":"'GCSE'", "'subject'":"'maths'", "'topics'":"'simultaneous'", "'question_filename'":"'simultaneous1.png'"}

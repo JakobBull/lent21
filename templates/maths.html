@@ -4,7 +4,58 @@
 {% endblock %}
 
 {% block main %}
+<div width='100%'>
     <h1>
         Maths
     </h1>
+    {% if depth == 0 %}
+        <h3>
+            Take a look at some of the levels and topics in this subject:
+        </h3>
+    {% elif depth == 1 %}
+        <h3>
+            {{ level }}
+            Take a look at some of the topics in this subject at this level:
+        </h3>
+        <h5>
+            <br>
+            <table>
+                <tbody>
+                    {% for topic in topics %}
+                        <tr>
+                            <td>
+                                <a href="{{'/maths/' ~ level ~ '/' ~ topic}}">
+                                    {{ topic.capitalize() }}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </h5>
+    {% else %}
+        <h3>
+            {{ level }} {{ topics }}
+        </h3>
+        <br>
+        <h5>
+            Take a look at some of the questions in this topic at this level:
+        </h5>
+        <br>
+            <table>
+                <tbody>
+                    {% for q in questions %}
+                        <tr>
+                            <td>
+                                <a href="{{'/questions/' ~ q[0]}}">
+                                    {{ q[1] }}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    {% endif %}
+</div>
+
 {% endblock %}

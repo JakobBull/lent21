@@ -38,7 +38,7 @@ def get_video_codes(vid_dict):
 
     return vid_list
 
-def get_related_questions(search_key, max_questions=3, random=True):
+def get_related_questions(search_key, max_questions=10, random=True):
     query = 'SELECT * FROM Questions WHERE topics = ?'
     params = (search_key,)
     result = sqliteExecute(query, params)
