@@ -70,7 +70,7 @@ def login():
         # Ensure username exists and password is correct
         if len(result) != 1 or not check_password_hash(result[0][2], request.form.get("password")):
             #return render_template("apology.html", error="Invalid username and/or password", error_code=401)
-            flash("Invalid username and/or password")
+            flash("Incorrect username and/or password")
             return render_template("login.html")
 
         # Remember which user has logged in
@@ -101,15 +101,21 @@ def register():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return render_template("apology.html", error="Must provide username", error_code=400)
+            #return render_template("apology.html", error="Must provide username", error_code=400)
+            flash("Must provide username")
+            return render_template("register.html")
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return render_template("apology.html", error="Must provide password", error_code=400)
+            #return render_template("apology.html", error="Must provide password", error_code=400)
+            flash("Must provide password")
+            return render_template("register.html")
 
         # Ensure confirmation password was submitted
         elif not request.form.get("password"):
-            return render_template("apology.html", error="Must provide confirmation of password", error_code=400)
+            #return render_template("apology.html", error="Must provide confirmation of password", error_code=400)
+            flash("Must provide confirmation of password")
+            return render_template("register.html")
 
         # Ensure username is unique by querying database for username
         username = request.form.get("username")
@@ -122,14 +128,20 @@ def register():
         password2 = request.form.get("confirm password")
 
         if len(result) != 0:
-            return render_template("apology.html", error="Username has already been taken, please choose a new one", error_code=400)
+            #return render_template("apology.html", error="Username has already been taken, please choose a new one", error_code=400)
+            flash("Username has already been taken, please choose a new one")
+            return render_template("register.html")
 
         # Ensure password and confirmed password match
         elif (password1 != password2):
-            return render_template("apology.html", error="Passwords do not match", error_code=400)
+            #return render_template("apology.html", error="Passwords do not match", error_code=400)
+            flash("Passwords do not match")
+            return render_template("register.html")
 
         elif len(password1) < 6 and any(map(str.isdigit, password1)) == False:
-            return render_template("apology.html", error="Password requires at least 6 characters and must include a number", error_code=400)
+            #return render_template("apology.html", error="Password requires at least 6 characters and must include a number", error_code=400)
+            flash("Password requires at least 6 characters and must include a number")
+            return render_template("register.html")
 
         # input user into database
         query = 'INSERT INTO Users (user_name, hash) VALUES (?, ?)'
@@ -239,13 +251,13 @@ def questions(question_id):
     params = (question_id,)
     result = sqliteExecute(query, params)
 
+    if len(result) == 0:
+        return render_template("apology.html", error="No questions with that question id")
+
     # get related questions
     topics = result[0][3]
     related_questions = get_related_questions(topics)
     print(related_questions)
-
-    if len(result) == 0:
-        return render_template("apology.html", error="No questions with that question id")
     
     # format strings for HTML
     level = result[0][1].upper()
