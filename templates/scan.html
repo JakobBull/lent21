@@ -11,68 +11,83 @@
     </colgroup>
 
     <tbody>
-        <tr>
-            <td>
-                {% if feed == 1 %}
-                <div>
-                    <form action="/scan" method="post">
-                        <button name="capture" type="submit" class="btn btn-danger">Capture</button>
-                    </form>
-                </div>
-                <br>
-                <img src="{{ url_for('video_feed') }}" width="70%%"/>
+        {% if loading == 0 %}
+            <tr>
+                <td>
+                    {% if feed == 1 %}
+                    <div>
+                        <form action="/scan" method="post">
+                            <button name="capture" type="submit" class="btn btn-danger">Capture</button>
+                        </form>
+                    </div>
+                    <br>
+                    <img src="{{ url_for('video_feed') }}" width="70%%"/>
+                    
+                    {% else %}
+                    <div>
+                        <form action="/scan" method="get">
+                            <button name="recapture" type="submit" class="btn btn-danger">Scan a different question</button>
+                        </form>
+                    </div>
+                    <br>
+                    <h5>
+                        We think this question is from the topic of {{ search_key }}!
+                    </h5>
+                    <br>
+                    <img src="{{'/static/images/' ~ img_name }}" width="560px"/>
                 
-                {% else %}
-                <div>
-                    <form action="/scan" method="get">
-                        <button name="recapture" type="submit" class="btn btn-danger">Scan a different question</button>
-                    </form>
-                </div>
-                <br>
-                <img src="{{'/static/images/' ~ img_name }}" width="560px"/>
+                    <h2>
+                        Check out the videos below if you're stuck!
+                    </h2>
+                    <br>
+                    {% endif %}
+                </td>
+                <td>
+                    <h3>
+                        Enjoyed this question? Why not checkout a similar question:
+                    </h3>
+
+                    {% for q in related_questions %}
+
+                    <tr>
+                        <td>
+                            <a href="{{'/questions/' ~ q[0]}}">
+                                {{ q[1] }}
+                            </a>
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </td>
+            </tr>
+            {% for youtube_id in vid_list %}
             
-                <h2>
-                    Check out the videos below if you're stuck!
-                </h2>
-                <br>
-                {% endif %}
-            </td>
-            <td>
-                <h3>
-                    Enjoyed this question? Why not checkout a similar question:
-                </h3>
-
-                {% for question in related_questions %}
-
-                <tr>
-                    <td>
-                        <a href="\question">
-                            {{ question }}
+            <tr>
+                <td>
+                    <h4>
+                        <a href="{{ 'https://www.youtube.com/watch?v=' ~ youtube_id}}">
+                            Video below not showing? Click here     
                         </a>
-                    </td>
-                </tr>
+                    </h4>
+                    
+                    <iframe src="{{ 'https://www.youtube.com/embed/' ~ youtube_id}}" width="560" height="315" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                </td>
+                <td>
+                </td>
+            </tr>
+            {% endfor %}
 
-                {% endfor %}
-
-            </td>
-        </tr>
-        {% for youtube_id in vid_list %}
-        
-        <tr>
-            <td>
-                <h4>
-                    <a href="{{ 'https://www.youtube.com/watch?v=' ~ youtube_id}}">
-                        Video below not showing? Click here     
-                    </a>
-                </h4>
-                
-                <iframe src="{{ 'https://www.youtube.com/embed/' ~ youtube_id}}" width="560" height="315" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-            </td>
-            <td>
-            </td>
-        </tr>
-       
-        {% endfor %}
+        {% else %}
+            <tr>
+                <td>
+                    <img src="{{'/static/images/' ~ img_name }}" width="560px"/>
+                </td>
+                <td>
+                    Hello
+                </td>
+            </tr>
+        {% endif %}
     </tbody>
 </table>
 <br>

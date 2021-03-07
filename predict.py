@@ -18,6 +18,8 @@ import pickle
 
 nltk.download('stopwords')
 nltk.download("words")
+nltk.download('wordnet')
+nltk.download('punkt')
 
 class Predict:
 
@@ -174,6 +176,6 @@ class Predict:
 
 
 
-if __name__ == "__main__":
+'''if __name__ == "__main__":
     Pred = Predict()
-    print("models prediction is:", Pred.predict("image.png"))
+    print("models prediction is:", Pred.predict("image.png"))'''

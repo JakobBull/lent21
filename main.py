@@ -164,17 +164,36 @@ def featured():
 @login_required
 def scan():
     if request.method == 'POST':
+        # get scanned image from user
         img_name = video_stream.save_frame()
-        image_path = "/static/images/" + img_name
-        #Pred = Predict()
-        #search_key = Pred.predict(image_path)
-        results = youtube_search('indices', max_results=3)
+        image_path = "/Users/naresh/Documents/University/Hackathons/CUES_Global_Solutions_Hacakathon/lent21/static/images/" + img_name
         
+        # render loading screen
+        #render_template('scan.html', loading=1, feed=0, img_name=img_name)
+
+        # predict what topic question is from
+        Pred = Predict()
+        search_key = Pred.predict(image_path) # get topic (search_key)
+
+        # search youtube for relevant videos
+        results = youtube_search(search_key, max_results=3)
         vid_list = get_video_codes(results)
 
-        return render_template('scan.html', feed=0, img_name=img_name, vid_list=vid_list, related_questions=[])
+        # find related videos
+        query = 'SELECT * FROM Questions WHERE topics = ?'
+        params = (search_key,)
+        result = sqliteExecute(query, params)
+
+        related_questions = []
+        for i, item in enumerate(result):
+            related_questions.append((item[0], item[-1]))
+        
+        print(results)
+
+        # render final template
+        return render_template('scan.html', loading=0, feed=0, img_name=img_name, search_key=search_key, vid_list=vid_list, related_questions=related_questions)
   
-    return render_template('scan.html', feed=1, related_questions=[])
+    return render_template('scan.html', loading=0, feed=1, related_questions=[])
 
 
 def gen(camera):
