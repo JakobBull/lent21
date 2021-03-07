@@ -16,6 +16,10 @@
                 </h3>
                 <br>
                 <img src="{{'/static/questions/' ~ question}}" width="90%">
+                <br>
+                <h4>
+                    Check out the videos below if you're stuck!
+                </h4>
             </td>
             <td width="80%">
                 <h4>
@@ -34,6 +38,22 @@
                 {% endfor %}
             </td>
         </tr>
+        {% for youtube_id in vid_list %}
+            
+            <tr>
+                <td>
+                    <h4>
+                        <a href="{{ 'https://www.youtube.com/watch?v=' ~ youtube_id}}">
+                            Video below not showing? Click here     
+                        </a>
+                    </h4>
+                    
+                    <iframe src="{{ 'https://www.youtube.com/embed/' ~ youtube_id}}" width="560" height="315" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                </td>
+                <td>
+                </td>
+            </tr>
+            {% endfor %}
     </table>
 
 {% endblock %}
