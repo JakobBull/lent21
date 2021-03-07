@@ -2,6 +2,7 @@ from typing import Dict, List
 import sqlite3
 import os
 import sys
+import csv
 
 app_dir = os.path.dirname(os.path.abspath(__file__))
 database_dir = os.path.join(app_dir, "db.sqlite")
@@ -96,20 +97,51 @@ def sqliteExecute(instruction, params = ()):
 
     except sqlite3.Error as error:
         print("Failed to update sqlite database", error)
+        conn.close()
+        print("The SQLite connection is closed")
+        return None
 
     conn.close()
     print("The SQLite connection is closed")
 
     return result
 
-def populate_questions(csv):
+def populate_questions(file):
     '''
 
-    populate the questoins database with all questions in the csv
+    populate the questions database with all questions in the csv
 
     '''
+    # clears database
+    query = 'DELETE FROM Questions'
+    sqliteExecute(query)
 
-    return None
+    q_list = []
+
+    # populates database from csv
+    with open(file, newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        header = 0
+        for row in reader:
+
+            # don't input header
+            if header == 0:
+                header = 1
+                continue
+
+            question_filename = "'" + row[2] + "'"
+            level = "'" + row[3] + "'"
+            subject = "'" + row[4] + "'"
+            topics = "'" + row[5] + "'"
+
+            q_dict = {"'level'":level, "'subject'":subject, "'topics'":topics, "'question_filename'":question_filename}
+            q_list.append(q_dict)
+
+            insertRow('Questions', q_dict)
+
+    return q_list
+
+# populate_questions('data_2.csv')[3]
 
 #q_dict = {"'level'":"'GCSE'", "'subject'":"'maths'", "'topics'":"'simultaneous'", "'question_filename'":"'simultaneous1.png'"}
 #insertRow('Questions', q_dict)

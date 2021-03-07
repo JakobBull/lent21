@@ -2,6 +2,7 @@
 
 from youtube_search import YoutubeSearch
 from sql_utils import sqliteExecute
+from random import randint
 
 def youtube_search(key_list, max_results=10, return_type='dict'):
 
@@ -37,17 +38,36 @@ def get_video_codes(vid_dict):
 
     return vid_list
 
-def get_related_questions(search_key):
+def get_related_questions(search_key, max_questions=3, random=True):
     query = 'SELECT * FROM Questions WHERE topics = ?'
     params = (search_key,)
     result = sqliteExecute(query, params)
 
     related_questions = []
-    max_questions = 3
-    for i, item in enumerate(result):
-        if i < max_questions:
-            related_questions.append((item[0], item[-1]))
-        else:
-            break
+    
+    if random == True:
+
+        i = 0
+        counter = 0
+
+        while i < max_questions and counter < 100:
+
+            # pick random number
+            r = randint(0,len(result)-1)
+            q_id = result[r][0]
+            name = result[r][-1]
+
+            if (q_id, name) not in related_questions:
+                related_questions.append((q_id, name))
+
+                i += 1
+                
+            counter += 1
+    else:
+        for i in range((result)):
+            if i < max_questions:
+                related_questions.append((result[i][0], result[i][-1]))
+            else:
+                break
     
     return related_questions
