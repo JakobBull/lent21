@@ -49,6 +49,8 @@ def lemmatize(text):
     return "".join(text)
 
 def keep_string(text):
+    text = re.sub('=+', "equals", text)
+    text = re.sub('[<>]+', "notequals", text)
     text = re.sub('\-+', " ", text)
     text = re.sub('[^0-9a-zA-Z ]+', '', text)
     text = re.sub('[0-9]+', 'number', text)
@@ -64,7 +66,7 @@ def keep_string(text):
 
 data = pd.read_csv("data_1.csv")
 
-columns = data.columns
+columns = ['latex', 'text']
 
 for column in columns:
     data[column]= data[column].transform(normalize_whitespace)

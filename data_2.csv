@@ -1,51 +1,121 @@
-,Unnamed: 0,numerical_text,latex,text,label,finaltext
-0,number,number times,number times,simplify,indeces,simplify number times
-1,number,number,number,number,algebra,number number
-2,number,error,error,would number fill swimming pool water many taps used,ratios,would number fill swimming pool water many taps used error
-3,number,error,error,number older twice old sum three ratio age,ratios,number older twice old sum three ratio age error
-4,number,number,number,times number left station cumulative frequency graph information correct nearest minute,stats,times number left station cumulative frequency graph information correct nearest minute number
-5,number,number,left beginarray number endarray right,number solve simultaneous,simultaneous,number solve simultaneous left beginarray number endarray right
-6,number,number,left beginarray number endarray right,solve simultaneous,simultaneous,solve simultaneous left beginarray number endarray right
-7,number,sqrt number,sqrt number,work value number,algebra,work value number sqrt number
-8,number,number,number,expand number,algebra,expand number number
-9,number,number,number,write number product prime,numbers,write number product prime number
-10,number,sqrt number,sqrt number,work value,algebra,work value sqrt number
-11,number,number,left beginarray number endarray right,solve simultaneous,simultaneous,solve simultaneous left beginarray number endarray right
-12,number,number,number,fully,algebra,fully number
-13,number,beginaligned number endaligned,left beginarrayl number endarray right,use graph find satisfy,simultaneous,use graph find satisfy left beginarrayl number endarray right
-14,number,solve quad number,quad number,solve number,inequalities,solve number quad number
-15,number,simplify frac number,frac number,ae number simplify,algebra,ae number simplify frac number
-16,number,error,error,integer number possible,inequalities,integer number possible error
-17,number,error,error,number raise money game people fair sided dice person roll multiple work probability win,probability,number raise money game people fair sided dice person roll multiple work probability win error
-18,number,number,left beginarray number endarray right,solve algebraically simultaneous,unknown,solve algebraically simultaneous left beginarray number endarray right
-19,number,frac number,frac number,write single fraction number,algebra,write single fraction number frac number
-20,number,solve frac number,frac number,number,algebra,number frac number
-21,number,frac number times,frac number times,number ye simplify fully,indeces,number ye simplify fully frac number times
-22,number,frac number sqrt can be written in the form where and,frac number sqrt text can be written in the form where and,number show written form,algebra,number show written form frac number sqrt text can be written in the form where and
-23,number,frac number times,frac number times,value,indeces,value frac number times
-24,number,left number right,number,simplify,indeces,simplify number
-25,number,number,number,write value number,indeces,write value number number
-26,number,left frac number right,frac number,simplify fully number,indeces,simplify fully number frac number
-27,number,error,error,bonus number people work equally rest get salesman must show answer,ratios,bonus number people work equally rest get salesman must show answer error
-28,number,number,number,number,algebra,number number
-29,number,number,number,expand number,algebra,expand number number
-30,number,error,error,number three seven pence random probability exactly,probability,number three seven pence random probability exactly error
-31,number,number,left beginarray number endarray right,number solve simultaneous,unknown,number solve simultaneous left beginarray number endarray right
-32,number,error,error,number two line segment find,unknown,number two line segment find error
-33,number,simplify frac number,frac number,simplify number,algebra,simplify number frac number
-34,number,error,error,integer greater prove algebraically number always even,proof,integer greater prove algebraically number always even error
-35,number,expand number sqrt,number sqrt,expand number,algebra,expand number number sqrt
-36,number,error,error,written form value,algebra,written form value error
-37,number,number,number,unknown,algebra,unknown number
-38,number,frac number sqrt,frac number sqrt,denominator,algebra,denominator frac number sqrt
-39,number,error,error,plane speed number work estimate travel mile,numbers,plane speed number work estimate travel mile error
-40,number,number,number,expand simplify number,algebra,expand simplify number number
-41,number,left number right,number,simplify number,indeces,simplify number number
-42,number,solve quad number,quad number,solve number,algebra,solve number quad number
-43,number,error,error,prove square odd number always multiple,proof,prove square odd number always multiple error
-44,number,number,number,express number product prime,numbers,express number product prime number
-45,number,frac number times,frac number times,work,algebra,work frac number times
-46,number,number,number,express number product prime,numbers,express number product prime number
-47,number,error,error,number supermarket probability fruit independently,probability,number supermarket probability fruit independently error
-48,number,number,number,solve inequality number,inequalities,solve inequality number number
-49,number,error,error,perimeter right angled triangle number sides ratio area,ratios,perimeter right angled triangle number sides ratio area error
+,Unnamed: 0,id,level,subject,label,latex,confidence,text,finaltext
+0,0,indeces2.png,GCSE,Maths,indices,number times,1.0,simplify,simplify number times
+1,1,ratios7.png,GCSE,Maths,ratios,error,0.0,number normal price television reduced,number normal price television reduced error
+2,2,algebra6.png,GCSE,Maths,algebra,number,0.99951171875,number,number number
+3,3,ratios3.png,GCSE,Maths,ratios,error,0.0,would number fill swimming pool water many taps used,would number fill swimming pool water many taps used error
+4,4,ratios2.png,GCSE,Maths,ratios,error,0.0,number older twice old sum three ratio age,number older twice old sum three ratio age error
+5,5,probability6.png,GCSE,Maths,probability,error,0.0,work probability day june rain tennis,work probability day june rain tennis error
+6,6,simultaneous7.png,GCSE,Maths,simultaneous,left beginarray number equals endarray right,1.0,number solve simultaneous,number solve simultaneous left beginarray number equals endarray right
+7,7,stats1.png,GCSE,Maths,stats,number,1.0,times number left station cumulative frequency graph information correct nearest minute,times number left station cumulative frequency graph information correct nearest minute number
+8,8,algebra30.png,GCSE,Maths,algebra,number,0.99951171875,number currant iced pack box total formula,number currant iced pack box total formula number
+9,9,simultaneous5.png,GCSE,Maths,simultaneous,left beginarray number equals endarray right,0.99462890625,number solve simultaneous,number solve simultaneous left beginarray number equals endarray right
+10,10,indeces20.png,GCSE,Maths,indices,left beginarray number times endarray right,0.7104997818804609,write order number,write order number left beginarray number times endarray right
+11,11,probability8.png,GCSE,Maths,probability,error,0.0,rest random sweet eats another probability two orange show,rest random sweet eats another probability two orange show error
+12,12,probability7.png,GCSE,Maths,probability,error,0.0,raise money game people fair number sided dice person roll multiple work probability win,raise money game people fair number sided dice person roll multiple work probability win error
+13,13,indeces11.png,GCSE,Maths,indices,number,1.0,simplify,simplify number
+14,14,simultaneous4.png,GCSE,Maths,simultaneous,left beginarray number equals endarray right,0.96923828125,solve simultaneous,solve simultaneous left beginarray number equals endarray right
+15,15,inequalities4.png,GCSE,Maths,inequalities,number notequals,1.0,number solve,number solve number notequals
+16,16,algebra4.png,GCSE,Maths,algebra,sqrt number,1.0,work value number,work value number sqrt number
+17,17,algebra10.png,GCSE,Maths,algebra,number,1.0,expand number,expand number number
+18,18,algebra39.png,GCSE,Maths,algebra,text the subject of formula equals frac number,0.98828125,make subject formula number,make subject formula number text the subject of formula equals frac number
+19,19,ratios9.png,GCSE,Maths,ratios,left beginarray hline number frac endarray right,0.9965834617614746,number table set inversely proportional square find equation,number table set inversely proportional square find equation left beginarray hline number frac endarray right
+20,20,numbers3.png,GCSE,Maths,numbers,number,0.99853515625,write number product prime,write number product prime number
+21,21,ratios10.png,GCSE,Maths,ratios,error,0.0,number white black used gamesome ratio fraction,number white black used gamesome ratio fraction error
+22,22,algebra13.png,GCSE,Maths,algebra,sqrt number,1.0,work value,work value sqrt number
+23,23,inequalities5.png,GCSE,Maths,inequalities,notequals number quad,0.98828125,grid show shading region three,grid show shading region three notequals number quad
+24,24,probability5.png,GCSE,Maths,probability,error,0.0,school chosen probability teacher female number male schoolwork total,school chosen probability teacher female number male schoolwork total error
+25,25,algebra42.png,GCSE,Maths,algebra,number,1.0,number expand,number expand number
+26,26,simultaneous1.png,GCSE,Maths,simultaneous,left beginarray number equals endarray right,0.99755859375,solve simultaneous,solve simultaneous left beginarray number equals endarray right
+27,27,algebra14.png,GCSE,Maths,algebra,number,1.0,fully,fully number
+28,28,algebra21.png,GCSE,Maths,algebra,number,1.0,unknown,unknown number
+29,29,simultaneous3.png,GCSE,Maths,simultaneous,left beginarrayl equals number endarray right,0.7841380359604955,use graph find satisfy,use graph find satisfy left beginarrayl equals number endarray right
+30,30,inequalities2.png,GCSE,Maths,inequalities,quad number notequals,0.86279296875,solve number,solve number quad number notequals
+31,31,algebra34.png,GCSE,Maths,algebra,frac number equals,0.99462890625,solve,solve frac number equals
+32,32,algebra37.png,GCSE,Maths,algebra,number,1.0,fully,fully number
+33,33,indeces9.png,GCSE,Maths,indices,number times,1.0,simplify,simplify number times
+34,34,algebra45.png,GCSE,Maths,algebra,frac number,0.99951171875,age number simplify,age number simplify frac number
+35,35,indeces16.png,GCSE,Maths,indices,number,0.99951171875,number simplify fully,number simplify fully number
+36,36,algebra40.png,GCSE,Maths,algebra,number equals,0.68896484375,solve,solve number equals
+37,37,indeces13.png,GCSE,Maths,indices,error,0.0,written form find value,written form find value error
+38,38,probability10.png,GCSE,Maths,probability,error,0.0,work probability least grow yellow tulip,work probability least grow yellow tulip error
+39,39,algebra19.png,GCSE,Maths,algebra,frac number,1.0,ae number simplify,ae number simplify frac number
+40,40,algebra25.png,GCSE,Maths,algebra,number,0.93896484375,simplify,simplify number
+41,41,algebra22.png,GCSE,Maths,algebra,quad number equals,0.6923828125,number solve,number solve quad number equals
+42,42,inequalities1.png,GCSE,Maths,inequalities,error,0.0,integer number possible,integer number possible error
+43,43,inequalities7.png,GCSE,Maths,inequalities,unknown,0.7490234375,inequality shown number line,inequality shown number line unknown
+44,44,ratios6.png,GCSE,Maths,ratios,error,0.0,number mason year next go college stay rest know,number mason year next go college stay rest know error
+45,45,simulatenous2.png,GCSE,Maths,unknown,left beginarray number equals endarray right,0.50439453125,solve algebraically simultaneous,solve algebraically simultaneous left beginarray number equals endarray right
+46,46,algebra18.png,GCSE,Maths,algebra,frac number,1.0,write single fraction number,write single fraction number frac number
+47,47,indeces17.png,GCSE,Maths,indices,frac number,1.0,simplify fully,simplify fully frac number
+48,48,ratios5.png,GCSE,Maths,ratios,error,0.0,number got know higher percentage get,number got know higher percentage get error
+49,49,proof4.png,GCSE,Maths,proof,error,0.0,number integer greater prove algebraically always even,number integer greater prove algebraically always even error
+50,50,algebra17.png,GCSE,Maths,algebra,frac number equals,1.0,number,number frac number equals
+51,51,indeces5.png,GCSE,Maths,indices,frac number times,1.0,ye simplify fully,ye simplify fully frac number times
+52,52,simultaneous10.png,GCSE,Maths,simultaneous,left beginarray number equals endarray right,0.79833984375,number solve algebraically simultaneous,number solve algebraically simultaneous left beginarray number equals endarray right
+53,53,algebra47.png,GCSE,Maths,algebra,error,0.0,number show written form ax positive,number show written form ax positive error
+54,54,algebra2.png,GCSE,Maths,algebra,frac number sqrt text can be written in the form where and,0.99951171875,number show written form,number show written form frac number sqrt text can be written in the form where and
+55,55,indeces1.png,GCSE,Maths,indices,frac number times,1.0,value,value frac number times
+56,56,indeces19.png,GCSE,Maths,indices,number,0.9990234375,write value number,write value number number
+57,57,indeces8.png,GCSE,Maths,indices,number,0.9970703125,simplify,simplify number
+58,58,indeces10.png,GCSE,Maths,indices,number div,1.0,simplify,simplify number div
+59,59,indeces7.png,GCSE,Maths,indices,number,0.9921875,write value number,write value number number
+60,60,indeces6.png,GCSE,Maths,indices,frac number,0.9990234375,simplify fully number,simplify fully number frac number
+61,61,algebra32.png,GCSE,Maths,algebra,number equals,0.8994140625,solve number,solve number number equals
+62,62,algebra46.png,GCSE,Maths,algebra,error,0.0,number expression written form find value,number expression written form find value error
+63,63,simultaneous6.png,GCSE,Maths,simultaneous,left beginarrayl equals number endarray right,0.9293336868286132,use graph find satisfy number,use graph find satisfy number left beginarrayl equals number endarray right
+64,64,probability9.png,GCSE,Maths,probability,error,0.0,number tulip grow red yellow random two complete probability tree diagram,number tulip grow red yellow random two complete probability tree diagram error
+65,65,ratios4.png,GCSE,Maths,ratios,error,0.0,bonus number people work equally rest get salesman must show answer,bonus number people work equally rest get salesman must show answer error
+66,66,inequalities6.png,GCSE,Maths,inequalities,number notequals,1.0,number solve inequality,number solve inequality number notequals
+67,67,probability4.png,GCSE,Maths,probability,error,0.0,probability rain day june tennis match complete tree diagram information,probability rain day june tennis match complete tree diagram information error
+68,68,algebra5.png,GCSE,Maths,algebra,number,1.0,number,number number
+69,69,algebra35.png,GCSE,Maths,algebra,frac number,1.0,number write single fraction form,number write single fraction form frac number
+70,70,algebra29.png,GCSE,Maths,algebra,equals frac number,1.0,make subject formula number,make subject formula number equals frac number
+71,71,algebra15.png,GCSE,Maths,algebra,number,1.0,expand number,expand number number
+72,72,probability3.png,GCSE,Maths,probability,error,0.0,number three seven pence random probability exactly,number three seven pence random probability exactly error
+73,73,algebra27.png,GCSE,Maths,algebra,frac number times,0.99951171875,number simplify fully,number simplify fully frac number times
+74,74,geometry1.png,GCSE,Maths,unknown,error,0.0,number two line segment find,number two line segment find error
+75,75,inequalities9.png,GCSE,Maths,inequalities,number geq,0.68212890625,solve inequality,solve inequality number geq
+76,76,algebra11.png,GCSE,Maths,algebra,frac number,0.9990234375,simplify number,simplify number frac number
+77,77,algebra44.png,GCSE,Maths,algebra,number,1.0,expand simplify number,expand simplify number number
+78,78,proof2.png,GCSE,Maths,proof,error,0.0,integer greater prove algebraically number always even,integer greater prove algebraically number always even error
+79,79,proof3.png,GCSE,Maths,proof,equals number dot,0.8634797881823033,algebraically written,algebraically written equals number dot
+80,80,simultaneous9.png,GCSE,Maths,simultaneous,left beginarray number equals endarray right,1.0,number solve simultaneous,number solve simultaneous left beginarray number equals endarray right
+81,81,algebra8.png,GCSE,Maths,algebra,number sqrt,0.99951171875,expand number,expand number number sqrt
+82,82,algebra33.png,GCSE,Maths,algebra,number,1.0,expand simplify number,expand simplify number number
+83,83,algebra3.png,GCSE,Maths,algebra,error,0.0,written form value,written form value error
+84,84,inequalities8.png,GCSE,Maths,inequalities,number notequals leq,0.87060546875,number represent inequality line,number represent inequality line number notequals leq
+85,85,simultaneous8.png,GCSE,Maths,simultaneous,left beginarray number equals endarray right,0.994140625,number solve simultaneous,number solve simultaneous left beginarray number equals endarray right
+86,86,ratios8.png,GCSE,Maths,ratios,error,0.0,number washing vat added price pay total machine,number washing vat added price pay total machine error
+87,87,algebra31.png,GCSE,Maths,algebra,number,0.99951171875,number,number number
+88,88,algebra26.png,GCSE,Maths,algebra,number,1.0,number,number number
+89,89,indeces22.png,GCSE,Maths,indices,number frac,1.0,number find value,number find value number frac
+90,90,algebra1.png,GCSE,Maths,algebra,number,1.0,unknown,unknown number
+91,91,algebra43.png,GCSE,Maths,algebra,number,1.0,expand number,expand number number
+92,92,algebra12.png,GCSE,Maths,algebra,frac number sqrt,0.99951171875,denominator,denominator frac number sqrt
+93,93,probability11.png,GCSE,Maths,probability,error,0.0,number three seven pence random probability exactly,number three seven pence random probability exactly error
+94,94,numbers4.png,GCSE,Maths,numbers,error,0.0,plane speed number work estimate travel mile,plane speed number work estimate travel mile error
+95,95,algebra23.png,GCSE,Maths,algebra,frac number equals,0.92724609375,unknown,unknown frac number equals
+96,96,indeces15.png,GCSE,Maths,indices,number sqrt,1.0,number expand answer form,number expand answer form number sqrt
+97,97,algebra38.png,GCSE,Maths,algebra,equals frac number,1.0,number change formula temperature minimum elderly home smith decide whether lower,number change formula temperature minimum elderly home smith decide whether lower equals frac number
+98,98,algebra16.png,GCSE,Maths,algebra,number,1.0,expand simplify number,expand simplify number number
+99,99,indeces3.png,GCSE,Maths,indices,number,1.0,simplify number,simplify number number
+100,100,indeces21.png,GCSE,Maths,indices,number,1.0,number simplify,number simplify number
+101,101,algebra41.png,GCSE,Maths,algebra,frac number,0.99951171875,simplify,simplify frac number
+102,102,algebra28.png,GCSE,Maths,algebra,number equals text to find the value of,0.9951171875,solve find value,solve find value number equals text to find the value of
+103,103,algebra7.png,GCSE,Maths,algebra,quad number equals,0.96142578125,solve number,solve number quad number equals
+104,104,indeces14.png,GCSE,Maths,indices,sqrt number,1.0,work value,work value sqrt number
+105,105,proof1.png,GCSE,Maths,proof,error,0.0,prove square odd number always multiple,prove square odd number always multiple error
+106,106,probability12.png,GCSE,Maths,probability,number,0.8349609375,number random two probability ria counter must show working,number random two probability ria counter must show working number
+107,107,numbers1.png,GCSE,Maths,numbers,number,0.99853515625,express number product prime,express number product prime number
+108,108,algebra9.png,GCSE,Maths,algebra,frac number times,1.0,work,work frac number times
+109,109,indeces12.png,GCSE,Maths,indices,number,0.99951171875,find value number,find value number number
+110,110,indeces23.png,GCSE,Maths,indices,frac number,1.0,find value number,find value number frac number
+111,111,probability1.png,GCSE,Maths,probability,error,0.0,number raise money game people fair sided dice person roll multiple work probability win,number raise money game people fair sided dice person roll multiple work probability win error
+112,112,numbers2.png,GCSE,Maths,numbers,number,1.0,express number product prime,express number product prime number
+113,113,probability2.png,GCSE,Maths,probability,error,0.0,number supermarket probability fruit independently,number supermarket probability fruit independently error
+114,114,algebra36.png,GCSE,Maths,algebra,number,1.0,number expand,number expand number
+115,115,algebra20.png,GCSE,Maths,algebra,number,0.99951171875,expand simplify number,expand simplify number number
+116,116,inequalities3.png,GCSE,Maths,inequalities,number notequals,1.0,solve inequality,solve inequality number notequals
+117,117,indeces18.png,GCSE,Maths,indices,number,0.80517578125,number write value,number write value number
+118,118,algebra24.png,GCSE,Maths,algebra,left beginarray equals number text work out the value of solve endarray right,1.0,work value solve,work value solve left beginarray equals number text work out the value of solve endarray right
+119,119,ratios1.png,GCSE,Maths,ratios,error,0.0,perimeter right angled triangle number sides ratio area,perimeter right angled triangle number sides ratio area error

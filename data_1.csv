@@ -1,70 +1,207 @@
-,numerical_text,latex,text,label
-0,\( p ^ { 2 } \times p ^ { 5 } \),p ^ { 2 } \times p ^ { 5 },"(a) Simplify p?x p*
-",indeces
-1,\( y ^ { 2 } - 2 y \),y ^ { 2 } - 2 y,"2 2y
+,id,level,subject,label,latex,confidence,text
+0,indeces2.png,GCSE,Maths,indices,p ^ { 2 } \times p ^ { 5 },1,"(a) Simplify p?x p*
+"
+1,ratios7.png,GCSE,Maths,ratios,error,0,"16 The normal price of a television is reduced by 30% in a sale.
+The sale price of the television is £350
+
+Work out the normal price of the television.
+"
+2,algebra6.png,GCSE,Maths,algebra,y ^ { 2 } - 2 y,0.99951171875,"2 2y
 ise y
 torise
 Fac
 (b)
-",algebra
-2,error,error,"It would take 120 minutes to fill a swimming pool using water from 5 taps.
+"
+3,ratios3.png,GCSE,Maths,ratios,error,0,"It would take 120 minutes to fill a swimming pool using water from 5 taps.
 
 (a) How many minutes will it take to fill the pool if only 3 of the taps are used?
-",ratios
-3,error,error,"Kiaria is 7 years older than Jay.
+"
+4,ratios2.png,GCSE,Maths,ratios,error,0,"Kiaria is 7 years older than Jay.
 Martha is twice as old as Kiaria.
 The sum of their three ages is 77
 
 Find the ratio of Jay’s age to Kiaria’s age to Martha’s age.
-",ratios
-4,48,48,"The times that 48 trains left a station on Monday were recorded.
+"
+5,probability6.png,GCSE,Maths,probability,error,0,"Work out the probability that, on a day in June, it does not rain and my tennis match
+is cancelled.
+"
+6,simultaneous7.png,GCSE,Maths,simultaneous,\left. \begin{array} { l } { 4 x + 7 y = 1 } \\ { 3 x + 10 y = 15 } \end{array} \right.,1,"18 Solve the simultaneous equations
+ax+7y =1
+3x + 10y = 15
+"
+7,stats1.png,GCSE,Maths,stats,48,1,"The times that 48 trains left a station on Monday were recorded.
 
 The cumulative frequency graph gives information about the numbers of minutes the
 trains were delayed, correct to the nearest minute.
-",stats
-5,"\( 3 x + 4 y = 5 \)
-\( 2 x - 3 y = 9 \)",\left. \begin{array} { l } { 3 x + 4 y = 5 } \\ { 2 x - 3 y = 9 } \end{array} \right.,"15 Solve the simultaneous equations
+"
+8,algebra30.png,GCSE,Maths,algebra,6,0.99951171875,"4 Kalinda buys x packs of currant buns and y boxes of iced buns.
+
+There are 6 currant buns in a pack of currant buns.
+There are 8 iced buns in a box of iced buns.
+
+Kalinda buys a total of T buns.
+Write down a formula for T in terms of x and y.
+"
+9,simultaneous5.png,GCSE,Maths,simultaneous,\left. \begin{array} { l } { 3 x + 4 y = 5 } \\ { 2 x - 3 y = 9 } \end{array} \right.,0.99462890625,"15 Solve the simultaneous equations
 
 Bxt+4y=5
 2x—3y=9
-",simultaneous
-6,"\( 4 x + y = 25 \)
-\( x - 3 y = 16 \)",\left. \begin{array} { l } { 4 x + y = 25 } \\ { x - 3 y = 16 } \end{array} \right.,"Solve the simultaneous equations
+"
+10,indeces20.png,GCSE,Maths,indices,\left. \begin{array} { l l l } { 2.73 \times 10 ^ { 3 } } & { 27.3 \times 10 ^ { - 3 } } & { 273 \times 10 ^ { 2 } } \end{array} \right.,0.7104997818804609,"(c) Write these numbers in order of size.
+Start with the smallest number.
+
+2.73 x 10° 27.3 x 10% 273 x 10° 0.00273
+"
+11,probability8.png,GCSE,Maths,probability,error,0,"There are n sweets in a bag.
+6 of the sweets are orange.
+The rest of the sweets are yellow.
+
+Hannah takes at random a sweet from the bag.
+She eats the sweet.
+
+Hannah then takes at random another sweet from the bag.
+She eats the sweet.
+
+The probability that Hannah eats two orange sweets is ;
+
+(a) Show that n?—-n-90=0
+"
+12,probability7.png,GCSE,Maths,probability,error,0,"Karl wants to raise money for charity.
+He designs a game for people to play.
+
+Karl uses a fair 10-sided dice for the game.
+The dice is numbered from 1 to 10
+
+Each person will roll the dice once.
+A person wins the game if the dice lands on a multiple of 4
+
+Ali plays the game once.
+
+(a) Work out the probability that Ali will win the game.
+"
+13,indeces11.png,GCSE,Maths,indices,( k ^ { 3 } ) ^ { 2 },1,"(©) Simplify (&?
+"
+14,simultaneous4.png,GCSE,Maths,simultaneous,\left. \begin{array} { l } { 4 x + y = 25 } \\ { x - 3 y = 16 } \end{array} \right.,0.96923828125,"Solve the simultaneous equations
 ax +y=25
 
 x—3y=16
-",simultaneous
-7,\( ( \sqrt { 12 } - \sqrt { 3 } ) ^ { 2 } \),( \sqrt { 12 } - \sqrt { 3 } ) ^ { 2 },"(©) Work out the value of (12 - 3)
-",algebra
-8,\( 2 m ( m + 3 ) \),2 m ( m + 3 ),"(a) Expand — 2m(m + 3)
-",algebra
-9,525,525,"Write 525 as a product of its prime factors.
-",numbers
-10,\( ( \sqrt { 2 } + \sqrt { 8 } ) ^ { 2 } \),( \sqrt { 2 } + \sqrt { 8 } ) ^ { 2 },"(b) Work out the value of (V2 + V8)?
-",algebra
-11,"\( 5 x + y = 21 \)
-\( x - 3 y = 9 \)",\left. \begin{array} { l } { 5 x + y = 21 } \\ { x - 3 y = 9 } \end{array} \right.,"Solve the simultaneous equations
+"
+15,inequalities4.png,GCSE,Maths,inequalities,3 x - 5 < 16,1,"17 (a) Solve 3x-5 < 16
+"
+16,algebra4.png,GCSE,Maths,algebra,( \sqrt { 12 } - \sqrt { 3 } ) ^ { 2 },1,"(©) Work out the value of (12 - 3)
+"
+17,algebra10.png,GCSE,Maths,algebra,2 m ( m + 3 ),1,"(a) Expand — 2m(m + 3)
+"
+18,algebra39.png,GCSE,Maths,algebra,F \text { the subject of the formula } C = \frac { 5 ( F - 32 ) } { 9 },0.98828125,"5(F — 32)
+
+(b) Make F the subject of the formula C = 9
+"
+19,ratios9.png,GCSE,Maths,ratios,\left. \begin{array} { | c | c | c | c | c | } \hline x & { 1 } & { 2 } & { 3 } & { 4 } \\ \hline y & { 9 } & { 2 \frac { 1 } { 4 } } & { 1 } & { \frac { 9 } { 16 } } \\ \hline \end{array} \right.,0.9965834617614746,"13 The table shows a set of values for x and y.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+x 1 2 4
+1 9
+
+9 2 2
+
+y 4 16
+
+ 
+
+y is inversely proportional to the square of x.
+
+(a) Find an equation for y in terms of x.
+
+ 
+"
+20,numbers3.png,GCSE,Maths,numbers,525,0.99853515625,"Write 525 as a product of its prime factors.
+"
+21,ratios10.png,GCSE,Maths,ratios,error,0,"14 White shapes and black shapes are used in a game.
+Some of the shapes are circles.
+All the other shapes are squares.
+
+The ratio of the number of white shapes to the number of black shapes is 3:7
+The ratio of the number of white circles to the number of white squares is 4:5
+The ratio of the number of black circles to the number of black squares is 2:5
+
+Work out what fraction of all the shapes are circles.
+"
+22,algebra13.png,GCSE,Maths,algebra,( \sqrt { 2 } + \sqrt { 8 } ) ^ { 2 },1,"(b) Work out the value of (V2 + V8)?
+"
+23,inequalities5.png,GCSE,Maths,inequalities,x + y < 7 \quad y < 2 x \quad y > 3,0.98828125,"On the grid show, by shading, the region that satisfies all three of the inequalities
+
+xty<7 y<2x y>3
+"
+24,probability5.png,GCSE,Maths,probability,error,0,"One of the teachers at a school is chosen at random.
+The probability that this teacher is female is 2
+
+There are 36 male teachers at the school.
+
+Work out the total number of teachers at the school.
+"
+25,algebra42.png,GCSE,Maths,algebra,3 ( 2 + t ),1,"4 (a) Expand 3(2+/¢)
+"
+26,simultaneous1.png,GCSE,Maths,simultaneous,\left. \begin{array} { l } { 5 x + y = 21 } \\ { x - 3 y = 9 } \end{array} \right.,0.99755859375,"Solve the simultaneous equations
 
 Sxty=21
 x-3y=9
-",simultaneous
-12,\( 9 x ^ { 2 } - 6 x y \),9 x ^ { 2 } - 6 x y,"(b) Factorise fully 9x? — 6xy
-",algebra
-13,\( \begin{aligned} y & = x ^ { 2 } - 4 x - 2 \\ x + y & = 6 \end{aligned} \),\left. \begin{array}{l}{ y = x ^ { 2 } - 4 x - 2 }\\{ x + y = 6 }\end{array} \right.,"(b) Use the graph to find estimates for the values of x that satisfy the simultaneous
+"
+27,algebra14.png,GCSE,Maths,algebra,9 x ^ { 2 } - 6 x y,1,"(b) Factorise fully 9x? — 6xy
+"
+28,algebra21.png,GCSE,Maths,algebra,n ^ { 2 } - 7 n,1,"(e) Factorise_n?—7n
+"
+29,simultaneous3.png,GCSE,Maths,simultaneous,\left. \begin{array}{l}{ y = x ^ { 2 } - 4 x - 2 }\\{ x + y = 6 }\end{array} \right.,0.7841380359604955,"(b) Use the graph to find estimates for the values of x that satisfy the simultaneous
 equations
 
 yer -4y-2
 
 xty=6
-",simultaneous
-14,Solve \( \quad 3 x - 5 < 16 \),\quad 3 x - 5 < 16,"Solve 3x-5< 16
-",inequalities
-15,Simplify \( \frac { 4 ( x + 5 ) } { x ^ { 2 } + 2 x - 15 } \),\frac { 4 ( x + 5 ) } { x ^ { 2 } + 2 x - 15 },"Ae +5)
+"
+30,inequalities2.png,GCSE,Maths,inequalities,\quad 3 x - 5 < 16,0.86279296875,"Solve 3x-5< 16
+"
+31,algebra34.png,GCSE,Maths,algebra,\frac { 7 - 3 f } { 4 } = 2,0.99462890625,"(d) Solve a =2
+"
+32,algebra37.png,GCSE,Maths,algebra,3 x y ^ { 2 } - 6 x y,1,"(b) Factorise fully  3xy’— 6xy
+"
+33,indeces9.png,GCSE,Maths,indices,p ^ { 2 } \times p ^ { 5 },1,"(a) Simplify p*x p*
+"
+34,algebra45.png,GCSE,Maths,algebra,\frac { 4 ( x + 5 ) } { x ^ { 2 } + 2 x - 15 },0.99951171875,"AGe+ 5)
+
+23 Simplify — Sox 15
+"
+35,indeces16.png,GCSE,Maths,indices,( 3 e ) ^ { 0 },0.99951171875,"22 (a) Simplify fully (3e)°
+"
+36,algebra40.png,GCSE,Maths,algebra,x ^ { 2 } - 2 x - 1 = x + 3,0.68896484375,"(c) Solve x?-2x-1l=x+3
+"
+37,indeces13.png,GCSE,Maths,indices,error,0,"5V5 can be written in the form 5¢
+
+(b) Find the value of k.
+"
+38,probability10.png,GCSE,Maths,probability,error,0,"(b) Work out the probability that at least one of the bulbs will grow into a yellow tulip.
+"
+39,algebra19.png,GCSE,Maths,algebra,\frac { 4 ( x + 5 ) } { x ^ { 2 } + 2 x - 15 },1,"Ae +5)
 
 23 Simplify ~————_
 P TS 7 42x -15
-",algebra
-16,error,error,"nis an integer such that 3n + 2 < 14 and >i
+"
+40,algebra25.png,GCSE,Maths,algebra,6 g - 5 h - 4 g + 2 h,0.93896484375,"(a) Simplify 6g-—5h-4g+ 2h
+"
+41,algebra22.png,GCSE,Maths,algebra,\quad x ^ { 2 } = 4 ( x - 3 ) ^ { 2 },0.6923828125,"22 Solve x°= 4(x-3)°
+"
+42,inequalities1.png,GCSE,Maths,inequalities,error,0,"nis an integer such that 3n + 2 < 14 and >i
 
  
 
@@ -72,8 +209,325 @@ P TS 7 42x -15
 w+s
 
 Find all the possible values of n.
-",inequalities
-17,error,error,"11 Karl wants to raise money for charity.
+"
+43,inequalities7.png,GCSE,Maths,inequalities,x,0.7490234375,"(b) Here is an inequality, in x, shown on a number line.
+
+°
+
+ 
+
+ 
+
+T
+5S +4 3 2 -1 O 1
+
+Write down the inequality.
+"
+44,ratios6.png,GCSE,Maths,ratios,error,0,"2 Mr Mason asks 240 Year 11 students what they want to do next year.
+15% of the students want to go to college.
+: of the students want to stay at school.
+The rest of the students do not know.
+
+Work out the number of students who do not know.
+"
+45,simulatenous2.png,GCSE,Maths,unknown,\left. \begin{array} { l } { x ^ { 2 } + y ^ { 2 } = 25 } \\ { y - 3 x = 13 } \end{array} \right.,0.50439453125,"Solve algebraically the simultaneous equations
+
+e+ y=25
+y-3x=13
+"
+46,algebra18.png,GCSE,Maths,algebra,\frac { 2 } { y + 3 } - \frac { 1 } { y - 6 },1,"(b) Write as a single fraction in its simplest form
+
+2 1
+
+yt3 y-6
+"
+47,indeces17.png,GCSE,Maths,indices,( \frac { 64 x ^ { 6 } } { 25 y ^ { 2 } } ) ^ { - \frac { 1 } { 2 } },1,"i
+
+ 
+
+(b) Simplify fully (= )
+y
+"
+48,ratios5.png,GCSE,Maths,ratios,error,0,"*2 Karen got 32 out of 80 in a maths test.
+She got 38% in an English test.
+
+Karen wants to know if she got a higher percentage in maths or in English.
+
+Did Karen get a higher percentage in maths or in English?
+"
+49,proof4.png,GCSE,Maths,proof,error,0,"16 nis an integer greater than |
+
+Prove algebraically that n?— 2 —(n-— 2) is always an even number.
+"
+50,algebra17.png,GCSE,Maths,algebra,\frac { 4 ( 8 x - 2 ) } { 3 x } = 10,1,"(a) Solve
+
+4(8x-2) _ 19
+3x
+"
+51,indeces5.png,GCSE,Maths,indices,\frac { p ^ { 3 } \times p ^ { 4 } } { p ^ { 2 } },1," 
+
+>
+
+3 ye pt
+(c) Simplify fully 2?
+P
+"
+52,simultaneous10.png,GCSE,Maths,simultaneous,\left. \begin{array} { l } { x ^ { 2 } + y ^ { 2 } = 25 } \\ { y - 3 x = 13 } \end{array} \right.,0.79833984375,"20 Solve algebraically the simultaneous equations
+
+ety =25
+y—3x= 13
+"
+53,algebra47.png,GCSE,Maths,algebra,error,0,"10 Show that (x + 1)(x + 2)(x + 3) can be written in the form ax’ + bx? +cx+d
+where a, b, c and d are positive integers.
+"
+54,algebra2.png,GCSE,Maths,algebra,\frac { 6 - \sqrt { 8 } } { \sqrt { 2 } - 1 } \text { can be written in the form } a + b \sqrt { 2 } \text { where } a \text { and } b,0.99951171875,"6-8 a .
+Show that 5 can be written in the form a +b V2 where a and b are integers.
+"
+55,indeces1.png,GCSE,Maths,indices,\frac { 3 ^ { 7 } \times 3 ^ { - 2 } } { 3 ^ { 3 } },1," 
+
+x32
+
+Work out the value of — >
+
+ 
+"
+56,indeces19.png,GCSE,Maths,indices,10 ^ { - 2 },0.9990234375,"(b) Write down the value of 107
+"
+57,indeces8.png,GCSE,Maths,indices,( 3 x ^ { 2 } y ^ { 4 } ) ^ { 3 },0.9970703125,"(a) Simplify (3x°y*
+"
+58,indeces10.png,GCSE,Maths,indices,g ^ { 6 } \div g ^ { 4 },1,"(b) Simplify g° + g*
+"
+59,indeces7.png,GCSE,Maths,indices,10 ^ { 0 },0.9921875,"(a) Write down the value of 10°
+"
+60,indeces6.png,GCSE,Maths,indices,( \frac { 64 x ^ { 6 } } { 25 y ^ { 2 } } ) ^ { - \frac { 1 } { 2 } },0.9990234375," 
+
+:
+(b) Simplify fully ( 48°) *
+25)""
+"
+61,algebra32.png,GCSE,Maths,algebra,7 ( k - 3 ) = 3 k - 5,0.8994140625,"(b) Solve 7(k—3)=3k-—5
+"
+62,algebra46.png,GCSE,Maths,algebra,error,0,"25 The expression x? — 8x + 21 can be written in the form (x — a)’ + b for all values of x.
+
+(a) Find the value of a and the value of b.
+"
+63,simultaneous6.png,GCSE,Maths,simultaneous,\left. \begin{array}{l}{ y = x ^ { 2 } - 4 x - 2 }\\{ x + y = 6 }\end{array} \right.,0.9293336868286133,"Use the graph to find estimates for the values of x that satisfy the simultaneous
+equations
+
+2 dx —2
+
+ 
+"
+64,probability9.png,GCSE,Maths,probability,error,0,"23 Yvonne has 10 tulip bulbs in a bag.
+
+7 of the tulip bulbs will grow into red tulips.
+3 of the tulip bulbs will grow into yellow tulips.
+
+Yvonne takes at random two tulip bulbs from the bag.
+She plants the bulbs.
+
+(a) Complete the probability tree diagram.
+"
+65,ratios4.png,GCSE,Maths,ratios,error,0,"‘A bonus of £2100 is shared by 10 people who work for a company.
+40% of the bonus is shared equally between 3 managers.
+The rest of the bonus is shared equally between 7 salesmen.
+
+One of the salesmen says,
+
+“If the bonus is shared equally between all 10 people I will get 25% more money.”
+
+Is the salesman correct?
+You must show how you get your answer.
+"
+66,inequalities6.png,GCSE,Maths,inequalities,6 y + 5 > 8,1,"5 (a) Solve the inequality 6y+5>8
+"
+67,probability4.png,GCSE,Maths,probability,error,0,"The probability that it will rain on a day in June is 0.2
+‘When it rains the probability that my tennis match is cancelled is 0.7
+When it does not rain, the probability that my tennis match is not cancelled is 0.95
+
+(a) Complete the probability tree diagram for this information.
+"
+68,algebra5.png,GCSE,Maths,algebra,n ^ { 2 } - 7 n,1,"(e) Factorise 1° = 7n
+"
+69,algebra35.png,GCSE,Maths,algebra,\frac { 5 } { x - 3 } - \frac { 4 } { x + 3 },1,"4
+
+. 5
+(c) Write y-3 x43 88 single fraction in its simplest form.
+"
+70,algebra29.png,GCSE,Maths,algebra,p = \frac { 3 a + 5 } { 4 - a },1,"Make a the subject of the formula p = * +5
+-a
+
+ 
+"
+71,algebra15.png,GCSE,Maths,algebra,4 ( x + 2 ),1,"(c) Expand 4(x +2)
+"
+72,probability3.png,GCSE,Maths,probability,error,0,"26 Fiza has 10 coins in a bag.
+There are three £1 coins and seven 50 pence coins.
+
+Fiza takes at random, 3 coins from the bag.
+
+Work out the probability that she takes exactly £2.50
+"
+73,algebra27.png,GCSE,Maths,algebra,\frac { p ^ { 3 } \times p ^ { 4 } } { p ^ { 2 } },0.99951171875," 
+
+2
+
+3 4
+(c) Simplify fully 2 *?
+P
+"
+74,geometry1.png,GCSE,Maths,unknown,error,0,"15 A and B are two points.
+
+Point 4 has coordinates (2, 4).
+Point B has coordinates (8, 9).
+
+Cis the midpoint of the line segment 4B.
+
+(a) Find the coordinates of C.
+"
+75,inequalities9.png,GCSE,Maths,inequalities,8 x - 3 \geq 6 x + 4,0.68212890625,"(b) Solve the inequality 8x—3 > 6x+4
+"
+76,algebra11.png,GCSE,Maths,algebra,\frac { x ^ { 2 } - 9 } { 2 x ^ { 2 } + 5 x - 3 },0.9990234375,"x -9
+
+Simplify —*—?—
+©) Simplify 57 4 5x—3
+"
+77,algebra44.png,GCSE,Maths,algebra,( m + 3 ) ( m + 10 ),1,"(c) Expand and simplify (m+ 3)(m + 10)
+"
+78,proof2.png,GCSE,Maths,proof,error,0,"nis an integer greater than |
+
+Prove algebraically that n? — 2 — (n — 2)? is always an even number.
+"
+79,proof3.png,GCSE,Maths,proof,x = 0.04 \dot { 5 },0.8634797881823033,"x= 0.045
+
+Prove algebraically that x can be written as >
+"
+80,simultaneous9.png,GCSE,Maths,simultaneous,\left. \begin{array} { l } { 4 x + 7 y = 1 } \\ { 3 x + 10 y = 15 } \end{array} \right.,1,"18 Solve the simultaneous equations
+4x+7Ty =1
+3x + 10y = 15
+
+ 
+"
+81,algebra8.png,GCSE,Maths,algebra,( 1 + \sqrt { 2 } ) ( 3 - \sqrt { 2 } ),0.99951171875,"Expand (1 + ¥2)3— 2)
+"
+82,algebra33.png,GCSE,Maths,algebra,( 2 x + 3 ) ( x - 8 ),1,"(c) Expand and simplify (2x + 3)(x- 8)
+"
+83,algebra3.png,GCSE,Maths,algebra,error,0,"V5(V8 + VI8) can be written in the form aV10 where a is an integer.
+
+Find the value of a.
+"
+84,inequalities8.png,GCSE,Maths,inequalities,- 2 < n \leq 3,0.87060546875,"14 2<n<3
+
+(a) Represent this inequality on the number line.
+"
+85,simultaneous8.png,GCSE,Maths,simultaneous,\left. \begin{array} { l } { 4 x + y = 25 } \\ { x - 3 y = 16 } \end{array} \right.,0.994140625,"18 Solve the simultaneous equations
+4x+y=25
+x—3y=16
+"
+86,ratios8.png,GCSE,Maths,ratios,error,0,"9 Jules buys a washing machine.
+
+20% VAT is added to the price of the washing machine.
+Jules then has to pay a total of £600
+
+What is the price of the washing machine with no VAT added?
+"
+87,algebra31.png,GCSE,Maths,algebra,3 e ^ { 2 } + 5 e,0.99951171875,"12 (a) Factorise 3e? + 5e
+"
+88,algebra26.png,GCSE,Maths,algebra,y ^ { 2 } - 2 y,1,"2 ay
+ise y
+Factorise
+(b)
+"
+89,indeces22.png,GCSE,Maths,indices,81 ^ { - \frac { 1 } { 2 } },1,"1
+12 (a) Find the value of 81 2
+"
+90,algebra1.png,GCSE,Maths,algebra,3 e ^ { 2 } + 5 e,1,"(a) Factorise 3c? + Se
+"
+91,algebra43.png,GCSE,Maths,algebra,3 x ( 2 x + 5 ),1,"(b) Expand = 3x(2x + 5)
+"
+92,algebra12.png,GCSE,Maths,algebra,\frac { 12 } { \sqrt { 3 } },0.99951171875,"12
+(a) Rationalise the denominator of
+"
+93,probability11.png,GCSE,Maths,probability,error,0,"26 Fiza has 10 coins in a bag.
+There are three £1 coins and seven 50 pence coins.
+
+Fiza takes at random, 3 coins from the bag.
+
+Work out the probability that she takes exactly £2.50
+"
+94,numbers4.png,GCSE,Maths,numbers,error,0,"A plane travels at a speed of 213 miles per hour.
+
+(a) Work out an estimate for the number of seconds the plane takes to travel | mile.
+"
+95,algebra23.png,GCSE,Maths,algebra,\frac { 11 - w } { 4 } = 1 + w,0.92724609375," 
+"
+96,indeces15.png,GCSE,Maths,indices,( 1 + \sqrt { 2 } ) ( 3 - \sqrt { 2 } ),1,"21 Expand (1+ V2)(3- V2)
+Give your answer in the form a + b V2 where a and b are integers.
+"
+97,algebra38.png,GCSE,Maths,algebra,C = \frac { 5 ( F - 32 ) } { 9 },1,"12 You can change temperatures from °F to °C by using the formula
+
+_ 5(F - 32)
+~ 9
+
+Cc
+F is the temperature in °F.
+C is the temperature in °C.
+The minimum temperature in an elderly person’s home should be 20°C.
+
+Mrs Smith is an elderly person.
+The temperature in Mrs Smith’s home is 77°F.
+
+*(a) Decide whether or not the temperature in Mrs Smith’s home is lower than the
+minimum temperature should be.
+"
+98,algebra16.png,GCSE,Maths,algebra,( x - 5 ) ( x + 3 ),1,"(d) Expand and simplify (w — 5)(x +3)
+"
+99,indeces3.png,GCSE,Maths,indices,( k ^ { 3 } ) ^ { 2 },1,"(c) Simplify («2
+"
+100,indeces21.png,GCSE,Maths,indices,( 3 x ^ { 2 } y ^ { 4 } ) ^ { 3 },1,"22 (a) Simplify (3x°y*)
+"
+101,algebra41.png,GCSE,Maths,algebra,\frac { x ^ { 2 } - 9 } { 2 x ^ { 2 } + 5 x - 3 },0.99951171875,"x -9
+2x° +5x—3
+
+(b) Simplify
+"
+102,algebra28.png,GCSE,Maths,algebra,n ^ { 2 } - n - 90 = 0 \text { to find the value of } n,0.9951171875,"(b) Solve n?-—n-—90=0 to find the value of n.
+"
+103,algebra7.png,GCSE,Maths,algebra,\quad 7 ( k - 3 ) = 3 k - 5,0.96142578125,"(b) Solve 7(k—3)=3k-5
+"
+104,indeces14.png,GCSE,Maths,indices,( \sqrt { 12 } - \sqrt { 3 } ) ^ { 2 },1,"(c) Work out the value of (vi2 - v3 y
+"
+105,proof1.png,GCSE,Maths,proof,error,0,"Prove that the square of an odd number is always | more than a multiple of 4
+"
+106,probability12.png,GCSE,Maths,probability,9,0.8349609375,"17 There are 9 counters in a bag.
+
+7 of the counters are green.
+2 of the counters are blue.
+
+Ria takes at random two counters from the bag.
+
+Work out the probability that Ria takes one counter of each colour.
+‘You must show your working.
+"
+107,numbers1.png,GCSE,Maths,numbers,56,0.99853515625,"Express 56 as the product of its prime factors.
+"
+108,algebra9.png,GCSE,Maths,algebra,\frac { 1 } { 7 } \times \frac { 2 } { 3 },1,"(a) Work out
+
+ale
+
+x
+
+wiry
+"
+109,indeces12.png,GCSE,Maths,indices,2 ^ { - 3 },0.99951171875,"(a) Find the value of 27
+"
+110,indeces23.png,GCSE,Maths,indices,( \frac { 64 } { 125 } ) ^ { \frac { 2 } { 3 } },1,"2
+3
+
+(b) Find the value of (3)
+125
+"
+111,probability1.png,GCSE,Maths,probability,error,0,"11 Karl wants to raise money for charity.
 He designs a game for people to play.
 
 Karl uses a fair 10-sided dice for the game.
@@ -85,142 +539,30 @@ A person wins the game if the dice lands on a multiple of 4
 Ali plays the game once.
 
 (a) Work out the probability that Ali will win the game.
-",probability
-18,"\( x ^ { 2 } + y ^ { 2 } = 25 \)
-\( y - 3 x = 13 \)",\left. \begin{array} { l } { x ^ { 2 } + y ^ { 2 } = 25 } \\ { y - 3 x = 13 } \end{array} \right.,"Solve algebraically the simultaneous equations
-
-e+ y=25
-y-3x=13
-",unknown
-19,\( \frac { 2 } { y + 3 } - \frac { 1 } { y - 6 } \),\frac { 2 } { y + 3 } - \frac { 1 } { y - 6 },"(b) Write as a single fraction in its simplest form
-
-2 1
-
-yt3 y-6
-",algebra
-20,Solve \( \frac { 4 ( 8 x - 2 ) } { 3 x } = 10 \),\frac { 4 ( 8 x - 2 ) } { 3 x } = 10,"(a) Solve
-
-4(8x-2) _ 19
-3x
-",algebra
-21,\( \frac { p ^ { 3 } \times p ^ { 4 } } { p ^ { 2 } } \),\frac { p ^ { 3 } \times p ^ { 4 } } { p ^ { 2 } }," 
-
->
-
-3 ye pt
-(c) Simplify fully 2?
-P
-",indeces
-22,\( \frac { 6 - \sqrt { 8 } } { \sqrt { 2 } - 1 } \) can be written in the form \( a + b \sqrt { 2 } \) where \( a \) and \( b \),\frac { 6 - \sqrt { 8 } } { \sqrt { 2 } - 1 } \text { can be written in the form } a + b \sqrt { 2 } \text { where } a \text { and } b,"6-8 a .
-Show that 5 can be written in the form a +b V2 where a and b are integers.
-",algebra
-23,\( \frac { 3 ^ { 7 } \times 3 ^ { - 2 } } { 3 ^ { 3 } } \),\frac { 3 ^ { 7 } \times 3 ^ { - 2 } } { 3 ^ { 3 } }," 
-
-x32
-
-Work out the value of — >
-
- 
-",indeces
-24,\( \left( 3 x ^ { 2 } y ^ { 4 } \right) ^ { 3 } \),( 3 x ^ { 2 } y ^ { 4 } ) ^ { 3 },"(a) Simplify (3x°y*
-",indeces
-25,\( 10 ^ { 0 } \),10 ^ { 0 },"(a) Write down the value of 10°
-",indeces
-26,\( \left( \frac { 64 x ^ { 6 } } { 25 y ^ { 2 } } \right) ^ { - \frac { 1 } { 2 } } \),( \frac { 64 x ^ { 6 } } { 25 y ^ { 2 } } ) ^ { - \frac { 1 } { 2 } }," 
-
-:
-(b) Simplify fully ( 48°) *
-25)""
-",indeces
-27,error,error,"‘A bonus of £2100 is shared by 10 people who work for a company.
-40% of the bonus is shared equally between 3 managers.
-The rest of the bonus is shared equally between 7 salesmen.
-
-One of the salesmen says,
-
-“If the bonus is shared equally between all 10 people I will get 25% more money.”
-
-Is the salesman correct?
-You must show how you get your answer.
-",ratios
-28,\( n ^ { 2 } - 7 n \),n ^ { 2 } - 7 n,"(e) Factorise 1° = 7n
-",algebra
-29,\( 4 ( x + 2 ) \),4 ( x + 2 ),"(c) Expand 4(x +2)
-",algebra
-30,error,error,"26 Fiza has 10 coins in a bag.
-There are three £1 coins and seven 50 pence coins.
-
-Fiza takes at random, 3 coins from the bag.
-
-Work out the probability that she takes exactly £2.50
-",probability
-31,"\( 4 x + 7 y = 1 \)
-\( 3 x + 10 y = 15 \)",\left. \begin{array} { l } { 4 x + 7 y = 1 } \\ { 3 x + 10 y = 15 } \end{array} \right.,"18 Solve the simultaneous equations
-ax+7y =1
-3x + 10y = 15
-",unknown
-32,error,error,"15 A and B are two points.
-
-Point 4 has coordinates (2, 4).
-Point B has coordinates (8, 9).
-
-Cis the midpoint of the line segment 4B.
-
-(a) Find the coordinates of C.
-",unknown
-33,Simplify \( \frac { x ^ { 2 } - 9 } { 2 x ^ { 2 } + 5 x - 3 } \),\frac { x ^ { 2 } - 9 } { 2 x ^ { 2 } + 5 x - 3 },"x -9
-
-Simplify —*—?—
-©) Simplify 57 4 5x—3
-",algebra
-34,error,error,"nis an integer greater than |
-
-Prove algebraically that n? — 2 — (n — 2)? is always an even number.
-",proof
-35,Expand \( ( 1 + \sqrt { 2 } ) ( 3 - \sqrt { 2 } ) \),( 1 + \sqrt { 2 } ) ( 3 - \sqrt { 2 } ),"Expand (1 + ¥2)3— 2)
-",algebra
-36,error,error,"V5(V8 + VI8) can be written in the form aV10 where a is an integer.
-
-Find the value of a.
-",algebra
-37,\( 3 e ^ { 2 } + 5 e \),3 e ^ { 2 } + 5 e,"(a) Factorise 3c? + Se
-",algebra
-38,\( \frac { 12 } { \sqrt { 3 } } \),\frac { 12 } { \sqrt { 3 } },"12
-(a) Rationalise the denominator of
-",algebra
-39,error,error,"A plane travels at a speed of 213 miles per hour.
-
-(a) Work out an estimate for the number of seconds the plane takes to travel | mile.
-",numbers
-40,\( ( x - 5 ) ( x + 3 ) \),( x - 5 ) ( x + 3 ),"(d) Expand and simplify (w — 5)(x +3)
-",algebra
-41,\( \left( k ^ { 3 } \right) ^ { 2 } \),( k ^ { 3 } ) ^ { 2 },"(c) Simplify («2
-",indeces
-42,Solve \( \quad 7 ( k - 3 ) = 3 k - 5 \),\quad 7 ( k - 3 ) = 3 k - 5,"(b) Solve 7(k—3)=3k-5
-",algebra
-43,error,error,"Prove that the square of an odd number is always | more than a multiple of 4
-",proof
-44,56,56,"Express 56 as the product of its prime factors.
-",numbers
-45,\( \frac { 1 } { 7 } \times \frac { 2 } { 3 } \),\frac { 1 } { 7 } \times \frac { 2 } { 3 },"(a) Work out
-
-ale
-
-x
-
-wiry
-",algebra
-46,180,180,"(a) Express 180 as a product of its prime factors.
-",numbers
-47,error,error,"19 Ina supermarket, the probability that John buys fruit is 0.7
+"
+112,numbers2.png,GCSE,Maths,numbers,180,1,"(a) Express 180 as a product of its prime factors.
+"
+113,probability2.png,GCSE,Maths,probability,error,0,"19 Ina supermarket, the probability that John buys fruit is 0.7
 In the same supermarket, the probability that John independently buys vegetables is 0.4
 
 Work out the probability that John buys fruit or buys vegetables or buys both.
-",probability
-48,\( 6 y + 5 > 8 \),6 y + 5 > 8,"(a) Solve the inequality 6y +5>8
-",inequalities
-49,error,error,"The perimeter of a right-angled triangle is 72 cm.
+"
+114,algebra36.png,GCSE,Maths,algebra,2 m ( m + 3 ),1,"6 (a) Expand 2m(m+ 3)
+"
+115,algebra20.png,GCSE,Maths,algebra,3 ( m + 4 ) - 2 ( 4 m + 1 ),0.99951171875,"(d) Expand and simplify 3(m + 4) — 2(4m + 1)
+"
+116,inequalities3.png,GCSE,Maths,inequalities,6 y + 5 > 8,1,"(a) Solve the inequality 6y +5>8
+"
+117,indeces18.png,GCSE,Maths,indices,10 ^ { 0 },0.80517578125,"17 (a) Write down the value of 10°
+"
+118,algebra24.png,GCSE,Maths,algebra,\left. \begin{array} { l } { x = 3 } \\ { \text { (a) Work out the value of } 4 x ^ { 2 } } \\ { \text { (b) Solve } 5 x + 4 = 14 + x } \end{array} \right.,1,"x=3
+
+(a) Work out the value of 4x7
+
+(b) Solve 5x+4=14+x
+"
+119,ratios1.png,GCSE,Maths,ratios,error,0,"The perimeter of a right-angled triangle is 72 cm.
 The lengths of its sides are in the ratio 3: 4: 5
 
 Work out the area of the triangle.
-",ratios
+"

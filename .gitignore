@@ -5,10 +5,10 @@ venv
 .vscode
 vscode
 vscode/
-
+opencv/
 opencv
 opencv-master/
 opencv-master
-
+opencv_contrib/
 build/
 build

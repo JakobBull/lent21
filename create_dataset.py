@@ -16,26 +16,34 @@ import pytesseract
 def return_label(name):
     label_list = ["algebra", "indeces", "inequalities", "numbers", "probability", "proof", "ratios", "simultaneous", "stats"]
     for item in label_list:
-        if item in str(name):
-            return item
+        if item != "indeces":
+            if item in str(name):
+                return item
+        else:
+            if item in str(name):
+                return "indices"
 
     return "unknown"
 
-#path = os.path.join()
-directory = 'questions'
+directory = os.path.join('static', 'questions')
 
 image_links = []
 image_names = []
+filenames = []
+levels = []
+subjects = []
 for filename in os.listdir(directory):
-    if filename.endswith(".jpg") or filename.endswith(".png"): 
-         image_links.append(os.path.join(directory, filename))
-         image_names.append(return_label(filename))
+    if filename.endswith(".jpg") or filename.endswith(".png"):
+        filenames.append(filename)
+        levels.append("GCSE")
+        subjects.append("Maths")
+        image_links.append(os.path.join(directory, filename))
+        image_names.append(return_label(filename))
     else:
         continue
 
-formats = ['latex_simplified', 'text']
+formats = ['latex_simplified']
 
-numerical_texts = []
 latex = []
 texts = []
 confidence = []
@@ -84,15 +92,10 @@ for link in image_links:
         else:
             latex.append("error")
 
-        element = r['text']
-
-        if element != None:
-            numerical_texts.append(element)
-        else:
-            numerical_texts.append("error")
+        
     except KeyError:
         latex.append("error")
-        numerical_texts.append("error")
+        confidence.append("0")
 
     element = pytesseract.image_to_string(Image.open(link))
     
@@ -101,8 +104,9 @@ for link in image_links:
     else:
         texts.append("error")
 
-print(len(latex), len(numerical_texts), len(texts))
 
-data = pd.DataFrame(list(zip(numerical_texts, latex, confidence, texts, image_names)), columns = ['numerical_text', 'latex', 'confidence', 'text', 'label'])
+data = pd.DataFrame(list(zip(filenames, levels, subjects, image_names, latex, confidence, texts)), columns = ['id', 'level','subject','label','latex', 'confidence', 'text'])
+print(len(filenames), len(levels), len(subjects), len(image_names), len(latex), len(confidence), len(texts))
+
 
 data.to_csv('data_1.csv')
