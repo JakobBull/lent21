@@ -1,14 +1,23 @@
 
-# API Examples
+# EduMate
 
-# lent21
-Lent '21 Global Solutions Hackathon
 
-## Docs 
+## General
 
-Some API examples for the image to Latex API that powers mathpix.com as well as others.  The general docs for the API can be found here: http://docs.mathpix.com
+Online learning has been hard, especially with the loneliness and uncertainty of a global pandemic. We are here to take some of the burden and inject some more joy into learning. Think of us as your online learning buddy!
 
-The purpose of this repo is to provide illustrative examples for various platforms.  Please use https://github.com/mathpix/ios-sample for a sample iOS app and use https://github.com/mathpix/android-sample for an Android one.
+## How to use this
 
-Note: for production use, please request an API key from support@mathpix.com.
+EduMate can be run locally on your device! To do this please first generate you API keys for mathpix at https://mathpix.com/ocr. Clone into the repository by navigating to your target directory and running.
 
+'git clone https://github.com/Jakob2000Cam/lent21.git'
+
+Please insert your API key into 'mathpix.py'.
+
+In order to run this locally please install dependencies. Run
+
+'pip install -r requirements.txt'
+
+Now you can launch the flask server by running 'main.py'
+
+If you wish to retrain the model please use 'create_dataset.py', 'preprocess.py' and 'classifier.py'
