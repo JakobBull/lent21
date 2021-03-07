@@ -175,6 +175,10 @@ def scan():
         Pred = Predict()
         search_key = Pred.predict(image_path) # get topic (search_key)
 
+        # handle errors
+        if search_key == "error":
+            pass
+
         # search youtube for relevant videos
         results = youtube_search(search_key, max_results=3)
         vid_list = get_video_codes(results)
@@ -185,10 +189,13 @@ def scan():
         result = sqliteExecute(query, params)
 
         related_questions = []
+        max_questions = 3
         for i, item in enumerate(result):
-            related_questions.append((item[0], item[-1]))
-        
-        print(results)
+            if i < max_questions:
+                related_questions.append((item[0], item[-1]))
+            else:
+                break
+            
 
         # render final template
         return render_template('scan.html', loading=0, feed=0, img_name=img_name, search_key=search_key, vid_list=vid_list, related_questions=related_questions)
@@ -237,7 +244,7 @@ def questions(question_id):
     level = result[0][1].upper()
     subject = result[0][2].capitalize()
     topics = result[0][3].capitalize()
-    print(topics)
+    #print(topics)
     question = result[0][-1].capitalize()
 
     return render_template('questions.html', level=level, subject=subject, topics=topics, question=question, related_questions=[])

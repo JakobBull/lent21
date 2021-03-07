@@ -48,17 +48,12 @@
                     </h3>
 
                     {% for q in related_questions %}
-
-                    <tr>
-                        <td>
+                        <p>
                             <a href="{{'/questions/' ~ q[0]}}">
                                 {{ q[1] }}
                             </a>
-                        </td>
-                    </tr>
-
+                        </p>
                     {% endfor %}
-
                 </td>
             </tr>
             {% for youtube_id in vid_list %}
