@@ -10,14 +10,14 @@ Online learning has been hard, especially with the loneliness and uncertainty of
 
 EduMate can be run locally on your device! To do this please first generate you API keys for mathpix at https://mathpix.com/ocr. Clone into the repository by navigating to your target directory and running.
 
-'git clone https://github.com/Jakob2000Cam/lent21.git'
+`git clone https://github.com/Jakob2000Cam/lent21.git`
 
 Please insert your API key into 'mathpix.py'.
 
 In order to run this locally please install dependencies. Run
 
-'pip install -r requirements.txt'
+`pip install -r requirements.txt`
 
-Now you can launch the flask server by running 'main.py'
+Now you can launch the flask server by running `main.py`
 
-If you wish to retrain the model please use 'create_dataset.py', 'preprocess.py' and 'classifier.py'
+If you wish to retrain the model please use `create_dataset.py`, `preprocess.py` and `classifier.py`
