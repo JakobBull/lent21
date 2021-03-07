@@ -207,7 +207,7 @@ def scan():
         # search youtube for relevant videos
         results = youtube_search(search_key, max_results=3)
         vid_list = get_video_codes(results)
-        print(vid_list)
+        #print(vid_list)
 
         # find related videos
         related_questions = get_related_questions(search_key)
@@ -273,8 +273,8 @@ def questions(question_id):
 
     # get related questions
     topics = result[0][3]
-    related_questions = get_related_questions(topics)
-    print(related_questions)
+    related_questions = get_related_questions(topics, max_questions=5)
+    #print(related_questions)
     
     # format strings for HTML
     level = result[0][1].upper()
@@ -282,7 +282,11 @@ def questions(question_id):
     topics = topics.capitalize()
     question = result[0][-1].capitalize()
 
-    return render_template('questions.html', level=level, subject=subject, topics=topics, question=question, related_questions=related_questions)
+    results = youtube_search(topics, max_results=3)
+    vid_list = get_video_codes(results)
+    print(vid_list)
+
+    return render_template('questions.html', level=level, subject=subject, topics=topics, question=question, related_questions=related_questions, vid_list=vid_list)
 
 
 @app.route('/video_feed', methods=["GET", "POST"])
